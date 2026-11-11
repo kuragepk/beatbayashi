@@ -1,0 +1,413 @@
+{
+ "format": "recensio.disclosure",
+ "version": 1,
+ "generatedAt": "2026-10-06T15:03:25.296Z",
+ "tool": {
+  "name": "Recensio",
+  "version": "0.1.0"
+ },
+ "board": {
+  "id": "b_hviigfeeg",
+  "name": "beatbayashi-ui16-a"
+ },
+ "summary": {
+  "panels": 16,
+  "opaquePixels": 993,
+  "humanPixels": 0,
+  "llmPixels": 993,
+  "importedPixels": 0,
+  "aiInvolved": true,
+  "originUnknownPresent": false,
+  "aiPercentOfOpaque": 100
+ },
+ "panels": [
+  {
+   "id": "p_x665f8eei",
+   "title": "play",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 play: start playback",
+   "provenance": "llm",
+   "opaquePixels": 81,
+   "humanPixels": 0,
+   "llmPixels": 81,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_ce66qpeei",
+   "title": "stop",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 stop: stop playback",
+   "provenance": "llm",
+   "opaquePixels": 95,
+   "humanPixels": 0,
+   "llmPixels": 95,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_fddso4eei",
+   "title": "rewind",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 rewind: back to the start (transport reset)",
+   "provenance": "llm",
+   "opaquePixels": 62,
+   "humanPixels": 0,
+   "llmPixels": 62,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_nx5s3veei",
+   "title": "speaker",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 speaker: sound on / preview / audio starting",
+   "provenance": "llm",
+   "opaquePixels": 49,
+   "humanPixels": 0,
+   "llmPixels": 49,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_2f9kiyeei",
+   "title": "speaker-off",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 speaker-off: mute",
+   "provenance": "llm",
+   "opaquePixels": 48,
+   "humanPixels": 0,
+   "llmPixels": 48,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_lfo6loeei",
+   "title": "gear",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 gear: settings",
+   "provenance": "llm",
+   "opaquePixels": 116,
+   "humanPixels": 0,
+   "llmPixels": 116,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_gmkcc7eei",
+   "title": "floppy",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 floppy: save",
+   "provenance": "llm",
+   "opaquePixels": 96,
+   "humanPixels": 0,
+   "llmPixels": 96,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_8b7ax4eei",
+   "title": "download",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 download: export / save a file to this device",
+   "provenance": "llm",
+   "opaquePixels": 62,
+   "humanPixels": 0,
+   "llmPixels": 62,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_8jd5kneei",
+   "title": "upload",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 upload: import a file",
+   "provenance": "llm",
+   "opaquePixels": 62,
+   "humanPixels": 0,
+   "llmPixels": 62,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_z5culueei",
+   "title": "check",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 check: done / saved / allowed",
+   "provenance": "llm",
+   "opaquePixels": 34,
+   "humanPixels": 0,
+   "llmPixels": 34,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_s5c518eei",
+   "title": "close",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 close: close / remove",
+   "provenance": "llm",
+   "opaquePixels": 52,
+   "humanPixels": 0,
+   "llmPixels": 52,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_pxlgyzeei",
+   "title": "warning",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 warning: careful / destructive change",
+   "provenance": "llm",
+   "opaquePixels": 84,
+   "humanPixels": 0,
+   "llmPixels": 84,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_wsimbceei",
+   "title": "arrow-left",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 arrow-left: move earlier",
+   "provenance": "llm",
+   "opaquePixels": 40,
+   "humanPixels": 0,
+   "llmPixels": 40,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_nwf43eeei",
+   "title": "minus",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 minus: shrink / one less",
+   "provenance": "llm",
+   "opaquePixels": 20,
+   "humanPixels": 0,
+   "llmPixels": 20,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_574z81eei",
+   "title": "plus",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 plus: grow / add",
+   "provenance": "llm",
+   "opaquePixels": 36,
+   "humanPixels": 0,
+   "llmPixels": 36,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_yh6n62eei",
+   "title": "knot",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 knot: selected preset (the brand mark knot, small)",
+   "provenance": "llm",
+   "opaquePixels": 56,
+   "humanPixels": 0,
+   "llmPixels": 56,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  }
+ ],
+ "aiActions": [
+  {
+   "at": "2026-10-06T15:03:25.292Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_x665f8eei",
+   "pixelsWritten": 81,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.292Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_ce66qpeei",
+   "pixelsWritten": 95,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_fddso4eei",
+   "pixelsWritten": 62,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_nx5s3veei",
+   "pixelsWritten": 49,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_2f9kiyeei",
+   "pixelsWritten": 48,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_lfo6loeei",
+   "pixelsWritten": 116,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_gmkcc7eei",
+   "pixelsWritten": 96,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_8b7ax4eei",
+   "pixelsWritten": 62,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.293Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_8jd5kneei",
+   "pixelsWritten": 62,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_z5culueei",
+   "pixelsWritten": 34,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_s5c518eei",
+   "pixelsWritten": 52,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_pxlgyzeei",
+   "pixelsWritten": 84,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_wsimbceei",
+   "pixelsWritten": 40,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_nwf43eeei",
+   "pixelsWritten": 20,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_574z81eei",
+   "pixelsWritten": 36,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.294Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_yh6n62eei",
+   "pixelsWritten": 56,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  }
+ ],
+ "llmSends": {
+  "unit": "transmissions",
+  "count": null,
+  "requests": null,
+  "providers": []
+ },
+ "limits": [
+  "Recensio はこのアプリの中で起きた操作だけを記録します。",
+  "取り込まれた画像 (imported) の出自は不明であり、利用者が自分で申告する必要があります。",
+  "MCP クライアントが申告した client / model 名は検証されていません。",
+  "同じ PC 上で動く任意のプログラムは data/runtime.json を読めるため、llm を名乗れます。来歴の llm / human は「どの経路から来たか」の区別であって、暗号的な認証ではありません。",
+  "外部の Web ページから読み取り系エンドポイントへ到達すること自体は防いでいません。応答の中身はブラウザの同一オリジンポリシーにより読めませんが、画像生成を繰り返させるなどの負荷や、Recensio が動いているかの探索は可能です。",
+  "この JSON には暗号署名がありません。改竄を検出できません (C2PA は未実装)。",
+  "LLM による図の生成では、モデルの出力を形式 (許可した描画ツール・座標・色の添字) だけ検査しています。描かれた内容が何であるかは判定しません。",
+  "これは法的助言ではありません。各プラットフォームの規約と各国法をご自身で確認してください。"
+ ],
+ "platformHints": {
+  "itch_io": {
+   "disclosureRequired": true,
+   "suggestedTags": [
+    "ai-generated-graphics"
+   ],
+   "note": "itch.io は手作業で編集した後でも生成 AI の利用を開示するよう求めています。"
+  },
+  "steam": {
+   "playerFacingContent": "unknown",
+   "category": "pre-generated",
+   "note": "Steam は 2026-01-17 に、開示対象をプレイヤーが消費する内容に限定しました。"
+  },
+  "eu_ai_act_article_50": {
+   "machineReadableMarkEmbedded": false,
+   "note": "第 50 条には「標準的な編集の補助機能」の免除規定があります。適用可否は未確定です。"
+  }
+ }
+}

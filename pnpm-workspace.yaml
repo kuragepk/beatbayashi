@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+# SPDX-License-Identifier: MIT-0
+#
+# pnpm settings for the web/Electron app (single package, not a workspace of
+# several). Moved here from package.json "overrides"/"allowScripts" when the
+# app switched from npm to pnpm (2026-10-07).
+
+# Keep the MIT re-implementation of sanitize-filename everywhere in the tree,
+# so the WTFPL truncate-utf8-bytes never comes back (release checklist R6).
+overrides:
+  sanitize-filename: 'file:./tools/sanitize-filename-mit'
+  # Security patches for transitive packages (critical/high advisories, 2026-10-28).
+  # Each key is limited to the major line the dependents already use, so nothing
+  # crosses a major line. Drop an entry when dependents ask for the patched version.
+  '@xmldom/xmldom@<0.8.15': 0.8.15
+  'brace-expansion@>=1.0.0 <2.0.0': 1.1.20
+  'brace-expansion@>=2.0.0 <3.0.0': 2.1.6
+  'brace-expansion@>=5.0.0 <6.0.0': 5.0.11
+  'fast-uri@>=3.0.0 <4.0.0': 3.1.7
+  'http-cache-semantics@>=4.0.0 <5.0.0': 4.3.0
+  'js-yaml@>=4.0.0 <5.0.0': 4.3.2
+  'source-map-js@<1.2.2': 1.2.2
+  'undici@>=6.0.0 <7.0.0': 6.29.1
+  'undici@>=7.0.0 <8.0.0': 7.30.1
+  'undici@>=8.0.0 <9.0.0': 8.12.2
+
+# Dependencies allowed to run install scripts. electron fetches its binary,
+# esbuild checks its platform binary.
+allowBuilds:
+  electron: true
+  esbuild: true
+  # Squirrel.Windows installer support; the app ships an NSIS installer, so its
+  # install script is not needed.
+  electron-winstaller: false
+
+# Supply-chain policy (2026-10-19, owner approval; checked by Claude-Code/bin/pnpm_policy_check.py).
+# Wait 7 days before installing a newly published version, and never accept a version whose
+# publish trust is lower than the one before it.
+# Exceptions go in minimumReleaseAgeExclude, each with "# reason: ... GHSA-... EXPIRE: YYYY-MM-DD".
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  # reason: older-line maintenance release published by the same long-standing maintainer as the
+  # previous version (checked 2026-10-19 with npm view _npmUser/time/provenance); pnpm compares it
+  # with the package's strongest publish method. Not a takeover sign. EXPIRE: 2027-04-19
+  - rollup@3.30.0
+  - semver@5.7.2
+  - semver@6.3.1
+  - vite@4.5.14
+  - vite@5.4.21

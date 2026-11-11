@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Content-Security-Policy (ISSUE-BEATBOX-013, P1-3 finding 12). default-src
+      is 'self'; every exception below is named with why it is open.
+
+      - style-src 'unsafe-inline': every component styles itself with a React
+        inline `style={{...}}` object (no .css files in this project), and the
+        <style> block above is also inline. Both count as inline styles under
+        CSP. There is no build step here to add nonces/hashes to them.
+      - worker-src blob:: Tone.js starts its scheduling clock on a Web Worker,
+        and registers its AudioWorkletProcessor (used by some effects), both
+        constructed from a same-process `Blob` and loaded via a blob: URL
+        rather than a served file (see node_modules/tone/build/esm/core/
+        clock/Ticker.js and core/worklet/ToneAudioWorklet.js).
+      - connect-src http://localhost:8080: the optional, opt-in pattern-save
+        backend a visitor may be running on their own machine (docs/PRIVACY.md
+        §2). Off by default; see the "Use backend" toggle.
+      - object-src 'none': no plugins/embeds are used.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:; connect-src 'self' http://localhost:8080; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <title>BeatBayashi</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="./favicon.ico" sizes="16x16 32x32" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/beatbayashi-mark-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon-180.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Colours/font are set by src/theme/theme-bridge.css (imported from
+         main.tsx), which defaults to these same values -- kept here only so
+         the page is not unstyled for the instant before that stylesheet
+         loads. */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0a0a0a;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

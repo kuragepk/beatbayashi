@@ -1,0 +1,119 @@
+{
+  "$comment": "Pinned font list for src/theme/kit/fonts/. Source: templates/ui-system/fonts/manifest.json (owner decision 2026-10-02). A font is used only if its sha256 matches. archiveMember: the URL is a zip; the member with that basename is extracted.",
+  "generated": "2026-10-02",
+  "pins": [
+    {
+      "family": "Misaki",
+      "file": "misaki/misaki_gothic.ttf",
+      "sha256": "0963e11e89d5fa409a7a048a52e8ea2d623d764a7998488f8a4291111611c4e1",
+      "url": "https://littlelimit.net/arc/misaki/misaki_ttf_2021-05-05.zip",
+      "archiveMember": "misaki_gothic.ttf"
+    },
+    {
+      "family": "k8x12",
+      "file": "k8x12/k8x12.ttf",
+      "sha256": "f810d41373e7f1dcb7c7adaafba2dd8b018ecba49182463b5a9601ffafafe6d5",
+      "url": "https://littlelimit.net/arc/k8x12/k8x12_ttf_2021-05-05.zip",
+      "archiveMember": "k8x12.ttf"
+    },
+    {
+      "family": "PixelMplus12",
+      "file": "PixelMplus12/PixelMplus12-Regular.ttf",
+      "sha256": "02f19467ea7cc235cc06c570b7f6c3b0a12a6f682bc8d74c43f2d323d97bcd12",
+      "url": "https://github.com/itouhiro/PixelMplus/releases/download/v1.0.0/PixelMplus-20130602.zip",
+      "archiveMember": "PixelMplus12-Regular.ttf"
+    },
+    {
+      "family": "PixelMplus12",
+      "file": "PixelMplus12/PixelMplus12-Bold.ttf",
+      "sha256": "7276753dc80861e2f45257b7b1a54c967c160065f5d40e10fb48aabd5648a2a6",
+      "url": "https://github.com/itouhiro/PixelMplus/releases/download/v1.0.0/PixelMplus-20130602.zip",
+      "archiveMember": "PixelMplus12-Bold.ttf"
+    },
+    {
+      "family": "DotGothic16",
+      "file": "DotGothic16/DotGothic16-Regular.ttf",
+      "sha256": "155da8f318553c11d9dffc2affbc7c2114c6a46f9740bcf639ed5568af92be71",
+      "url": "https://github.com/fontworks-fonts/DotGothic16/archive/14517183ab2f75e8bccafc5a0bff6685d268c687.zip",
+      "archiveMember": "DotGothic16-Regular.ttf"
+    },
+    {
+      "family": "BIZ UDPGothic",
+      "file": "BIZUDPGothic/BIZUDPGothic-Regular.ttf",
+      "sha256": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/bizudpgothic/BIZUDPGothic-Regular.ttf"
+    },
+    {
+      "family": "BIZ UDPGothic",
+      "file": "BIZUDPGothic/BIZUDPGothic-Bold.ttf",
+      "sha256": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/bizudpgothic/BIZUDPGothic-Bold.ttf"
+    },
+    {
+      "family": "BIZ UDGothic",
+      "file": "BIZUDGothic/BIZUDGothic-Regular.ttf",
+      "sha256": "709fcd41e3209fb765da750472f55ccdf925653e9fa7e1eb007cb65c8f749c75",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/bizudgothic/BIZUDGothic-Regular.ttf"
+    },
+    {
+      "family": "BIZ UDGothic",
+      "file": "BIZUDGothic/BIZUDGothic-Bold.ttf",
+      "sha256": "98a528b6b638463041968783cc0f63adaf4cdc26f5398afed68bab712d1113f3",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/bizudgothic/BIZUDGothic-Bold.ttf"
+    },
+    {
+      "family": "Noto Sans JP",
+      "file": "NotoSansJP/NotoSansJP[wght].ttf",
+      "sha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/notosansjp/NotoSansJP[wght].ttf"
+    },
+    {
+      "family": "M PLUS 1",
+      "file": "MPLUS1/MPLUS1[wght].ttf",
+      "sha256": "32dab296a06c3e87841ecd2bc9912434a964ad541e22ea19f764969dae93fced",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/mplus1/MPLUS1[wght].ttf"
+    },
+    {
+      "family": "M PLUS 2",
+      "file": "MPLUS2/MPLUS2[wght].ttf",
+      "sha256": "2e4f45c2391355fb03195da4854ffbe85fea49bfdff5cc51020238083af6b75c",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/mplus2/MPLUS2[wght].ttf"
+    },
+    {
+      "family": "IBM Plex Sans JP",
+      "file": "IBMPlexSansJP/IBMPlexSansJP-Regular.ttf",
+      "sha256": "372f8bba95f386856ae435dc0e69f08db1cac29bed513d99171a0ae2d307ba2a",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/ibmplexsansjp/IBMPlexSansJP-Regular.ttf"
+    },
+    {
+      "family": "IBM Plex Sans JP",
+      "file": "IBMPlexSansJP/IBMPlexSansJP-Bold.ttf",
+      "sha256": "bd8a98b9b55c9ea3f0fa1ed094c15981788cc9a41b0357f4453014fd1d44da19",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/ibmplexsansjp/IBMPlexSansJP-Bold.ttf"
+    },
+    {
+      "family": "LINE Seed JP",
+      "file": "LINESeedJP/LINESeedJP-Regular.ttf",
+      "sha256": "04a6c0077ddb8ba5af3638bd76b4600708dde7b38df047b40fbe6f3af358d3c3",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/lineseedjp/LINESeedJP-Regular.ttf"
+    },
+    {
+      "family": "LINE Seed JP",
+      "file": "LINESeedJP/LINESeedJP-Bold.ttf",
+      "sha256": "67aec2dc10b3ad210d6f7d53b33bbfea42ea28e32fa3834624eee699a638d5ff",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/lineseedjp/LINESeedJP-Bold.ttf"
+    },
+    {
+      "family": "Zen Kaku Gothic New",
+      "file": "ZenKakuGothicNew/ZenKakuGothicNew-Regular.ttf",
+      "sha256": "b840cd07a67d89cacca44249ae49aa99ee7640eb5ce623be8d8983d6aabac801",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/zenkakugothicnew/ZenKakuGothicNew-Regular.ttf"
+    },
+    {
+      "family": "Zen Kaku Gothic New",
+      "file": "ZenKakuGothicNew/ZenKakuGothicNew-Bold.ttf",
+      "sha256": "0081cedabc4921982fcd061f845a005664ac7fb642af2dd34b4007bc63ccd235",
+      "url": "https://raw.githubusercontent.com/google/fonts/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/zenkakugothicnew/ZenKakuGothicNew-Bold.ttf"
+    }
+  ]
+}

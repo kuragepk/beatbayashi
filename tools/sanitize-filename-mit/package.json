@@ -1,0 +1,9 @@
+{
+  "name": "sanitize-filename",
+  "version": "1.6.4-mit.1",
+  "description": "Minimal MIT filename sanitiser, local stand-in for sanitize-filename (builder-util only calls it with one string argument).",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": { "test": "node --test test.js" }
+}

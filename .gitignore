@@ -1,0 +1,87 @@
+# Build
+target/
+build/
+*.class
+*.jar
+*.war
+*.nar
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Maven
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.asc
+.flattened-pom.xml
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# Credentials — never commit keys of any kind
+.ssh/
+*.pem
+*_rsa
+*_ed25519
+id_*
+
+# Build logs (leak local absolute paths)
+*.log
+
+# Runtime data store (mock backend)
+patterns.json
+
+# Failed react-native-cli scaffold, kept locally for reference only
+beatbayashi-mobile.broken/
+.expo/
+
+# SQLite store created by the Spring backend on first run
+*.db
+
+# Left behind by scripts/verify-network-policy.mjs
+.verify-network-policy-*.json
+
+# Electron packaging output
+release/
+# --- standard shape (2026-09-14): local-only files that must never be committed
+.claude/settings.local.json
+.agent-env/
+.verify-self/
+.env.*
+!.env.example
+id_rsa*
+__pycache__/
+.pytest_cache/
+
+
+# synced pixel fonts (owner decision 2026-09-27 #73); source of truth is
+# templates/ui-system/fonts/, copied here by bin/sync-web-kit.mjs, not committed
+src/theme/kit/fonts/
+
+# local script output (icon previews, smoke reports); set BEATBAYASHI_OUT_DIR to put it elsewhere
+.out/

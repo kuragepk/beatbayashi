@@ -1,0 +1,18 @@
+# standard shape (2026-09-14)
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.py]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
+
+# standard-stamp: src=bin/gen-repo-standard.py src-sha256=2817d2859886 self-sha256=7aa49d2484a2 stamped=2026-09-18T06:19:21Z

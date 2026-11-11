@@ -1,0 +1,149 @@
+# SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+# SPDX-License-Identifier: MIT-0
+#
+# CI for the public copy of BeatBayashi. The app is at the repository root here.
+# This repository is a one-way copy of a private one (the phone app, the pattern
+# API servers and internal documents are developed there), so only the checks
+# of what is in this tree run.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      # pnpm first, so setup-node can find it for the cache. The version comes
+      # from packageManager in package.json.
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@v7
+        with:
+          # 22, not 20: jsdom 30 pulls an undici that needs a newer Node, and
+          # on 20 it throws while loading rather than failing a test.
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm exec tsc --noEmit
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Test
+        run: pnpm exec vitest run --reporter=verbose
+
+      # The pinned fonts are kept between runs, so a build does not stop when a
+      # font host is down. The prebuild step still checks every file's sha256
+      # against kit-fonts.pinned.json, and the key changes whenever that list does.
+      - name: Cache pinned fonts
+        uses: actions/cache@v6
+        with:
+          path: src/theme/kit/fonts
+          key: kit-fonts-${{ hashFiles('scripts/kit-fonts.pinned.json') }}
+
+      - name: Build
+        run: pnpm run build
+
+      # Every package Vite bundles into the web build must have its licence
+      # text in THIRD-PARTY-NOTICES.txt (MIT asks for it on redistribution).
+      - name: Third-party notices cover the bundle
+        run: node scripts/third-party-notices.mjs --check
+
+      # cli-export.mjs bundles src/export/midi.ts via esbuild, so it needs the
+      # packages installed above.
+      - name: CLI export (MIDI), byte-identical to the library and to a golden hash
+        run: node --test scripts/cli-export.test.mjs
+
+      # The rights notice inside the app must match docs/rights-notice.json.
+      - name: Rights notice is in sync
+        run: node scripts/sync-rights-notice.mjs --check
+
+      - name: Documentation links resolve
+        run: node scripts/check-doc-links.mjs
+
+      # docs/dependency-licenses.csv declares only allowed licenses.
+      - name: Dependency license ledger is clean
+        run: node scripts/check-audio-license.js
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: REUSE lint
+        run: |
+          python -m pip install --quiet reuse
+          python -m reuse lint
+
+  invariants:
+    name: No audio files in the tree
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          ! git ls-files | grep -Ei '[.](wav|mp3|ogg|flac)$'
+
+  secrets:
+    name: No secrets in history
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      # --fail stops on an HTTP error page instead of handing it to tar, and
+      # the download is tried again when GitHub answers 5xx. The sha256 is the
+      # one in the release's gitleaks_8.30.1_checksums.txt, and GitHub's asset
+      # digest says the same; nothing is unpacked unless it matches.
+      - name: Install gitleaks
+        run: |
+          curl -sSL --fail --retry 3 --retry-delay 10 --retry-all-errors --max-time 90 \
+            -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          sha256=551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+          echo "$sha256  gitleaks.tar.gz" | sha256sum -c -
+          sudo tar xzf gitleaks.tar.gz -C /usr/local/bin gitleaks
+          rm gitleaks.tar.gz
+      - name: Scan the full history with the repository config
+        run: gitleaks git . --no-banner --redact --exit-code 1
+
+  licenses:
+    name: Dependency licenses (no copyleft in runtime deps)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install
+        run: pnpm install --frozen-lockfile
+      # license-checker reads npm's nested node_modules and misses most of
+      # pnpm's tree, so the inventory comes from pnpm itself. It is written to a
+      # temporary file: the ledger in docs/ also lists the phone app and the
+      # pattern API, which are not in this repository.
+      - name: Inventory and fail on copyleft
+        run: |
+          pnpm licenses list --prod --json > "$RUNNER_TEMP/licenses.json"
+          node scripts/pnpm-licenses-csv.mjs "$RUNNER_TEMP/licenses.json" --out "$RUNNER_TEMP/dependency-licenses.csv" --fail-on "AGPL-1.0;AGPL-3.0;AGPL-3.0-only;AGPL-3.0-or-later;GPL-2.0;GPL-2.0-only;GPL-3.0;GPL-3.0-only;GPL-3.0-or-later;LGPL-2.1;LGPL-3.0;SSPL-1.0;EUPL-1.2;CC-BY-NC-4.0"

@@ -1,0 +1,83 @@
+{
+  "name": "beatbayashi",
+  "version": "0.1.0",
+  "license": "MIT-0",
+  "description": "A step-sequencer drum machine with runtime-synthesized sounds, no bundled audio samples.",
+  "author": "BeatBayashi contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuragepk/beatbayashi"
+  },
+  "main": "electron-main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite",
+    "fonts:fetch": "node scripts/fetch-kit-fonts.mjs",
+    "prebuild": "node scripts/fetch-kit-fonts.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx",
+    "check-ui-colors": "node scripts/check-ui-colors.mjs",
+    "pretest": "pnpm run check-ui-colors",
+    "electron-dev": "electron .",
+    "electron-build": "pnpm run build && electron-builder",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "node scripts/smoke.mjs",
+    "audit:viewport": "node -e \"const f=require('fs'),p=require('path');let d=process.cwd(),s=null;for(;;){const c=p.join(d,'projects','agent-parts','parts','viewport_audit_npm.mjs');if(f.existsSync(c)){s=c;break}const u=p.dirname(d);if(u===d)break;d=u}if(!s)console.log('[audit:viewport] skipped: desk part projects/agent-parts not found above this directory');else import(require('url').pathToFileURL(s).href).then(m=>{process.exitCode=m.run('soundbox',process.argv.slice(1))})\" --"
+  },
+  "dependencies": {
+    "@otoinki/loudness": "0.7.0",
+    "@otoinki/offline-render": "0.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tone": "^14.8.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.3.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "electron": "^44.9.1",
+    "electron-builder": "^26.17.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "jsdom": "^30.0.1",
+    "sanitize-filename": "file:./tools/sanitize-filename-mit",
+    "typescript": "^5.0.0",
+    "vite": "^6.4.5",
+    "vitest": "^4.1.12"
+  },
+  "build": {
+    "appId": "com.beatbayashi.app",
+    "productName": "BeatBayashi",
+    "files": [
+      "dist/**/*",
+      "electron-main.js",
+      "preload.js",
+      "assets/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "publish": null,
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "identity": null,
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "packageManager": "pnpm@11.28.5"
+}

@@ -1,0 +1,215 @@
+{
+ "format": "recensio.disclosure",
+ "version": 1,
+ "generatedAt": "2026-10-06T15:03:25.493Z",
+ "tool": {
+  "name": "Recensio",
+  "version": "0.1.0"
+ },
+ "board": {
+  "id": "b_apoas1ek5",
+  "name": "beatbayashi-ui16-d"
+ },
+ "summary": {
+  "panels": 7,
+  "opaquePixels": 491,
+  "humanPixels": 0,
+  "llmPixels": 491,
+  "importedPixels": 0,
+  "aiInvolved": true,
+  "originUnknownPresent": false,
+  "aiPercentOfOpaque": 100
+ },
+ "panels": [
+  {
+   "id": "p_d55zuoek5",
+   "title": "on-step",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 on-step: ON steps (a pad with its centre mark)",
+   "provenance": "llm",
+   "opaquePixels": 60,
+   "humanPixels": 0,
+   "llmPixels": 60,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_hlffl2ek5",
+   "title": "motion",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 motion: motion (a moving dot with speed lines)",
+   "provenance": "llm",
+   "opaquePixels": 47,
+   "humanPixels": 0,
+   "llmPixels": 47,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_9broohek5",
+   "title": "bell",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 bell: UI sound (a bell)",
+   "provenance": "llm",
+   "opaquePixels": 112,
+   "humanPixels": 0,
+   "llmPixels": 112,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_icfwj8ek5",
+   "title": "hemisphere",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 hemisphere: hemisphere (sun on the horizon)",
+   "provenance": "llm",
+   "opaquePixels": 86,
+   "humanPixels": 0,
+   "llmPixels": 86,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_q39ynuek5",
+   "title": "note",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 note: sub sound (a single note)",
+   "provenance": "llm",
+   "opaquePixels": 44,
+   "humanPixels": 0,
+   "llmPixels": 44,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_vp6no8ek5",
+   "title": "order",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 order: control order (list with up / down arrows)",
+   "provenance": "llm",
+   "opaquePixels": 66,
+   "humanPixels": 0,
+   "llmPixels": 66,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  },
+  {
+   "id": "p_any28nek5",
+   "title": "server",
+   "w": 16,
+   "h": 16,
+   "note": "ui16 server: backend (server rack)",
+   "provenance": "llm",
+   "opaquePixels": 76,
+   "humanPixels": 0,
+   "llmPixels": 76,
+   "importedPixels": 0,
+   "aiPercentOfOpaque": 100
+  }
+ ],
+ "aiActions": [
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_d55zuoek5",
+   "pixelsWritten": 60,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_hlffl2ek5",
+   "pixelsWritten": 47,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_9broohek5",
+   "pixelsWritten": 112,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_icfwj8ek5",
+   "pixelsWritten": 86,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_q39ynuek5",
+   "pixelsWritten": 44,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_vp6no8ek5",
+   "pixelsWritten": 66,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "at": "2026-10-06T15:03:25.493Z",
+   "actor": "llm",
+   "tool": "draw_pixels",
+   "panelId": "p_any28nek5",
+   "pixelsWritten": 76,
+   "client": "claude-code",
+   "model": "claude-opus-5-5"
+  }
+ ],
+ "llmSends": {
+  "unit": "transmissions",
+  "count": null,
+  "requests": null,
+  "providers": []
+ },
+ "limits": [
+  "Recensio はこのアプリの中で起きた操作だけを記録します。",
+  "取り込まれた画像 (imported) の出自は不明であり、利用者が自分で申告する必要があります。",
+  "MCP クライアントが申告した client / model 名は検証されていません。",
+  "同じ PC 上で動く任意のプログラムは data/runtime.json を読めるため、llm を名乗れます。来歴の llm / human は「どの経路から来たか」の区別であって、暗号的な認証ではありません。",
+  "外部の Web ページから読み取り系エンドポイントへ到達すること自体は防いでいません。応答の中身はブラウザの同一オリジンポリシーにより読めませんが、画像生成を繰り返させるなどの負荷や、Recensio が動いているかの探索は可能です。",
+  "この JSON には暗号署名がありません。改竄を検出できません (C2PA は未実装)。",
+  "LLM による図の生成では、モデルの出力を形式 (許可した描画ツール・座標・色の添字) だけ検査しています。描かれた内容が何であるかは判定しません。",
+  "これは法的助言ではありません。各プラットフォームの規約と各国法をご自身で確認してください。"
+ ],
+ "platformHints": {
+  "itch_io": {
+   "disclosureRequired": true,
+   "suggestedTags": [
+    "ai-generated-graphics"
+   ],
+   "note": "itch.io は手作業で編集した後でも生成 AI の利用を開示するよう求めています。"
+  },
+  "steam": {
+   "playerFacingContent": "unknown",
+   "category": "pre-generated",
+   "note": "Steam は 2026-01-17 に、開示対象をプレイヤーが消費する内容に限定しました。"
+  },
+  "eu_ai_act_article_50": {
+   "machineReadableMarkEmbedded": false,
+   "note": "第 50 条には「標準的な編集の補助機能」の免除規定があります。適用可否は未確定です。"
+  }
+ }
+}

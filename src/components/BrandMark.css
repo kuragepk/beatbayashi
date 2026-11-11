@@ -1,0 +1,26 @@
+/*
+ * SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+ *
+ * SPDX-License-Identifier: MIT-0
+ */
+
+/*
+ * Brand mark size follows the WINDOW WIDTH, not the text-size setting
+ * (owner, 2026-10-05). Only whole multiples of the 32 px master are used,
+ * so the pixel art stays square and sharp:
+ *   width < 1280 px  -> 32 px (master x1)
+ *   width >= 1280 px -> 64 px (master x2)
+ * 48 px is not used: there is no 48 or true 16 px master (favicon-16 is a
+ * box-averaged reduction), so 48 would be a 1.5x blur.
+ */
+.brand-mark--responsive {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 1280px) {
+  .brand-mark--responsive {
+    width: 64px;
+    height: 64px;
+  }
+}

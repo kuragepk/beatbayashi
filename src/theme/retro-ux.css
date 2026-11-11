@@ -1,0 +1,81 @@
+/* SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+ * SPDX-License-Identifier: MIT-0
+ *
+ * "retro-ux": the retro-game UX with no colour of its own. Owner decision
+ * 2026-10-29 (window): add Recensio's retro-ux to BeatBayashi (the dot console
+ * and 32bit themes are not added). Values come from
+ * templates/ui-system/themes/retro-ux.json: frame pixel-bevel 2 px, corner
+ * notch 1 px, spacing unit 8 / gap 8, cursor menu-arrow (blink 500 ms),
+ * selection indicator invert. Switched by <html data-ux="retro"> (themeStore.ts);
+ * OFF by default, and while it is off nothing here matches, so the frozen
+ * default look is unchanged. 色は持たない。既定は切。data-ux="retro" の時だけ効く。
+ *
+ * It names no colour: the bevel edges are derived by the browser from each
+ * element's own border colour, and the invert reads the existing --app-*
+ * tokens, so it combines with every colour theme.
+ *
+ * How each value is read (inferences; CSS has no exact word for them):
+ *   pixel-bevel      border-style outset / inset, square corners.
+ *   corner notch 1px border-radius 1px (a clip-path notch would clip the focus outline).
+ *   spacing 8        gaps and padding in multiples of 8 (4, 8, 16).
+ *   menu-arrow       a triangle in front of the focused button, blinking at 500 ms
+ *                    (1000 ms cycle) unless motion is reduced.
+ *   invert           a pressed (selected) button swaps its text and fill.
+ * Most of the app is styled inline, so the rules that must beat an inline
+ * style use !important. The step pads (.bb-step) are left alone.
+ * Fonts: the existing 外観 "Font" choice already offers the pixel fonts, so
+ * this file does not force a font.
+ */
+
+:root[data-ux='retro'] {
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+/* frames: a 2 px bevel with a 1 px corner notch on buttons and fields */
+:root[data-ux='retro'] button:not(.bb-step),
+:root[data-ux='retro'] select,
+:root[data-ux='retro'] input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']) {
+  border-width: 2px !important;
+  border-style: outset !important;
+  border-radius: 1px !important;
+}
+:root[data-ux='retro'] button:not(.bb-step):active,
+:root[data-ux='retro'] button[aria-pressed='true']:not(.bb-step),
+:root[data-ux='retro'] button[aria-checked='true']:not(.bb-step) {
+  border-style: inset !important;
+}
+
+/* spacing: gaps of 8 */
+:root[data-ux='retro'] button:not(.bb-step) {
+  gap: 8px;
+}
+
+/* selection indicator: invert (text and fill swap) */
+:root[data-ux='retro'] button[aria-pressed='true']:not(.bb-step),
+:root[data-ux='retro'] button[aria-checked='true']:not(.bb-step) {
+  background: var(--app-text) !important;
+  color: var(--app-panel) !important;
+}
+
+/* cursor: menu-arrow, blinking at 500 ms */
+:root[data-ux='retro'] button:not(.bb-step):focus-visible::before {
+  content: '\25B6\00a0';
+  animation: retro-ux-blink 1000ms steps(1, end) infinite; /* 500 ms on, 500 ms off */
+}
+@keyframes retro-ux-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root[data-ux='retro'] button:not(.bb-step):focus-visible::before {
+    animation: none;
+  }
+}
+:root[data-ux='retro'][data-reduced-motion='true'] button:not(.bb-step):focus-visible::before {
+  animation: none;
+}

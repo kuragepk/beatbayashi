@@ -1,0 +1,46 @@
+<!doctype html>
+<!--
+SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+
+SPDX-License-Identifier: MIT-0
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BeatBayashi sound lab (measurement only)</title>
+    <script>
+      // Counts the Web Audio nodes built while a voice renders, so a change
+      // can report nodes per hit. Must run before any module is loaded.
+      (function () {
+        var counts = {};
+        window.__nodeCounts = counts;
+        ['OscillatorNode', 'GainNode', 'BiquadFilterNode', 'AudioBufferSourceNode', 'ConstantSourceNode',
+          'StereoPannerNode', 'DelayNode', 'DynamicsCompressorNode', 'WaveShaperNode', 'ConvolverNode',
+          'ChannelSplitterNode', 'ChannelMergerNode', 'AnalyserNode'].forEach(function (name) {
+          var Original = window[name];
+          if (!Original) return;
+          window[name] = new Proxy(Original, {
+            construct: function (target, args, newTarget) {
+              counts[name] = (counts[name] || 0) + 1;
+              return Reflect.construct(target, args, newTarget === window[name] ? target : newTarget);
+            },
+          });
+        });
+        var proto = window.BaseAudioContext && window.BaseAudioContext.prototype;
+        if (proto) {
+          Object.getOwnPropertyNames(proto).forEach(function (key) {
+            if (key.indexOf('create') !== 0 || typeof proto[key] !== 'function') return;
+            var original = proto[key];
+            proto[key] = function () {
+              counts[key] = (counts[key] || 0) + 1;
+              return original.apply(this, arguments);
+            };
+          });
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <script type="module" src="./lab.ts"></script>
+  </body>
+</html>

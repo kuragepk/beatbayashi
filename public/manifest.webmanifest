@@ -1,0 +1,24 @@
+{
+  "name": "BeatBayashi",
+  "short_name": "BeatBayashi",
+  "description": "A step-sequencer drum machine with runtime-synthesized sounds, no bundled audio samples.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

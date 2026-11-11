@@ -1,0 +1,14 @@
+# gitleaks configuration (standard shape, 2026-09-13).
+# Default rules stay on. Paths below hold intentional look-alikes (fixtures, docs, seeds);
+# add a path only with a reason on the same line.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Intentional fixtures and documentation samples"
+paths = [
+  '''docs/''',
+  '''beatbayashi/LICENSES/''',
+]
+
+# standard-stamp: src=bin/gen-repo-standard.py src-sha256=2817d2859886 self-sha256=af6b52157170 stamped=2026-09-18T06:19:21Z

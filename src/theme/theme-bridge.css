@@ -1,0 +1,268 @@
+/* SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+ * SPDX-License-Identifier: MIT-0
+ *
+ * Owner decisions #70-71 (2026-09-27): bridges the 15 shared preset themes'
+ * generic --theme-color-* custom properties (./kit/themes.css) onto small
+ * --app-* tokens this app's components can read. No colour is invented here:
+ * every default below is the project's existing frozen hex (App.tsx / index.html
+ * body / RightsBanner.tsx's ACCENT/PANEL/BORDER/CONTROL constants), so a
+ * component that has not been switched to var(--app-*) yet keeps looking
+ * exactly as it always has.
+ *
+ * "modern" sets no --theme-color-* (it is the do-nothing default, matching
+ * the project's current, un-themed look), so the override block below is
+ * scoped to every *other* theme id.
+ */
+
+:root {
+  --app-bg: #0a0a0a;
+  --app-text: #ffffff;
+  --app-panel: #1a1a1a;
+  --app-control: #2a2a2a;
+  --app-accent: #0f8a80;
+  --app-border: #333333;
+  --app-danger: #ffb066;
+  --app-ok: #2ba695;
+  --app-focus: #0f8a80;
+  --app-muted: #999999;
+  --app-backdrop: #00000099;
+  /* Owner-approved exceptions to the palette freeze (2026-10-05), named
+   * tokens: the dark 浅葱 (asagi) mark inside an ON step cell, and the very
+   * dark 臙脂 (enji) fill of remove buttons. Contrast: mark vs ON fill
+   * #0f8a80 3.43:1, vs #17c7b5 6.81:1 (the weak accent's dark fill uses
+   * --app-accent-bright for its mark, 3.86:1); remove icon (#f0f0f0) vs the
+   * enji fill 14.8:1. */
+  --app-step-mark: #052f2c;
+  --app-remove: #3a0d14;
+
+  /* Tonal hierarchy (owner 2026-10-06: one light-dark order across the UI).
+   * Surfaces, darkest to lightest: bg < panel < raised control < hover;
+   * ON/selected is the lit asagi. Text: --app-text (primary), --app-muted
+   * (secondary), --app-disabled. Ratios on --app-panel #1a1a1a are in
+   * src/theme/contrast.test.ts and the CHANGELOG. */
+  --app-raised: #2a2a2a;
+  /* Sub-row pads (owner 2026-10-06, last revision): a deep blue-green
+   * (hue 195°, saturation 45%, lower than the asagi's) at asagi step 2's
+   * luminance, darker and calmer than the main ON, one brightness for all.
+   * OFF is black inside a frame of the same hue (step 3). ON vs OFF 3.16:1;
+   * frame vs panel 4.12:1; main ON vs sub ON 1.57:1 and about 20° of hue. */
+  --app-sub-on: #2d6376;
+  --app-sub-off: #000000;
+  --app-sub-frame: #3b849c;
+  --app-sea-1: #1a3b46;
+  --app-sea-2: #2d6376;
+  --app-sea-3: #3b849c;
+  --app-sea-4: #81acbb;
+  --app-sea-5: #c4d8df;
+  --app-hover: #363636;
+  --app-disabled: #767676;
+
+  /* Asagi ramp, 1 = darkest .. 5 = lightest: the same five mixes the pixel
+   * icons use (src/pixel-icons/pixelIconPalette.ts), resolved for the
+   * default asagi #0f8a80. The icons take their base from the theme accent. */
+  --pixel-icon-asagi: var(--app-accent);
+  --app-asagi-1: #073e3a;
+  --app-asagi-2: #0b6860;
+  --app-asagi-3: #0f8a80;
+  --app-asagi-4: #63b3ac;
+  --app-asagi-5: #b7dcd9;
+
+  /* Accent ramps for the genre families (owner 2026-10-06: blue, purple,
+   * red and orange stay as accents, at the asagi ramp's lightness). Each
+   * step has the same relative luminance as the asagi step of the same
+   * number (within 0.01), with saturation lowered to 42-55% for calm, so
+   * no hue reads brighter or darker than another. */
+  --app-blue-1: #1a385b;
+  --app-blue-2: #2c5e98;
+  --app-blue-3: #3d7dc7;
+  --app-blue-4: #88a8ce;
+  --app-blue-5: #c7d6e8;
+  --app-purple-1: #3f247d;
+  --app-purple-2: #6940c8;
+  --app-purple-3: #8868d3;
+  --app-purple-4: #ae9dd7;
+  --app-purple-5: #d9d1ec;
+  --app-red-1: #5d261b;
+  --app-red-2: #9b3f2d;
+  --app-red-3: #c85943;
+  --app-red-4: #d0988d;
+  --app-red-5: #e9cfca;
+  --app-orange-1: #4a3216;
+  --app-orange-2: #7d5424;
+  --app-orange-3: #a66f30;
+  --app-orange-4: #c59f72;
+  --app-orange-5: #e4d2bd;
+  /* Yellow for the pixel icons (2026-10-06). Started from the icon part's
+   * preview values (source/ramp.mjs: #4a3a10 #7d6418 #a8861f #c9b06a
+   * #e6dbb4, 7-28% brighter than the asagi steps) and moved along the same
+   * hue and saturation until each step matches the asagi luminance within
+   * 0.5%. */
+  /* Indigo (藍, hue 225°) for the sub pads (owner 2026-10-06): a blue that
+   * sits with asagi but reads as a different colour. Same luminance per
+   * step as the asagi ramp. */
+  --app-indigo-1: #233468;
+  --app-indigo-2: #3a57af;
+  --app-indigo-3: #5c78c9;
+  --app-indigo-4: #96a5d2;
+  --app-indigo-5: #cdd4ea;
+  --app-yellow-1: #44350f;
+  --app-yellow-2: #705a16;
+  --app-yellow-3: #96771c;
+  --app-yellow-4: #c0a351;
+  --app-yellow-5: #e2d5a7;
+}
+
+:root[data-theme]:not([data-theme='modern']) {
+  --app-bg: var(--theme-color-surface);
+  --app-panel: var(--theme-color-surface);
+  --app-control: var(--theme-color-surface);
+  --app-text: var(--theme-color-text);
+  --app-muted: var(--theme-color-text);
+  --app-accent: var(--theme-color-accent);
+  --app-border: var(--theme-color-border);
+  --app-focus: var(--theme-color-focus);
+  --app-danger: var(--theme-color-danger);
+  --app-ok: var(--theme-color-ok);
+  --app-backdrop: var(--theme-color-backdrop);
+  /* Owner decision #72 (2026-09-27): a handful of components need a second
+   * shade of an existing role (a stronger border, a dimmer/brighter accent,
+   * an "on accent" text colour) rather than a brand new colour. Each of
+   * these maps only to --theme-color-* roles that already exist above; the
+   * `-dark`/`selection` variants are not defined by every theme, so each
+   * falls back to the plain role it is a variant of, and from there to the
+   * frozen hex fallback baked into the component's own var() call. */
+  --app-border-strong: var(--theme-color-border-dark, var(--theme-color-border));
+  --app-panel-alt: var(--theme-color-surface-dark, var(--theme-color-surface));
+  --app-on-accent: var(--theme-color-surface-dark, var(--theme-color-surface));
+  --app-accent-dim: var(--theme-color-accent-dark, var(--theme-color-accent));
+  --app-accent-bright: var(--theme-color-selection, var(--theme-color-accent));
+  --app-danger-strong: var(--theme-color-danger-dark, var(--theme-color-danger));
+  --app-selection: var(--theme-color-selection, var(--theme-color-accent));
+  /* Same two owner-approved tokens, derived from the theme's own roles. */
+  --app-step-mark: color-mix(in srgb, var(--theme-color-accent) 35%, #000);
+  --app-remove: color-mix(in srgb, var(--theme-color-danger-dark, var(--theme-color-danger)) 30%, #000);
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: var(--theme-font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+}
+
+/* The colour of a voice name in the step grid. Green on the dark default. */
+:root {
+  --app-voice-label: var(--app-ok, #2ba695);
+}
+
+/* Light mode text (owner 2026-11-07: the type looked uneven on the matte light
+ * background). Measured on the live page before this: 103 controls in Arial
+ * next to body text in Segoe UI, Japanese left to a browser fallback, and bold
+ * labels that read heavy on paper. So in the light theme only: one family for
+ * Latin and Japanese from the system (no download; the bundled BIZ UDPGothic
+ * clipped the select text and costs 9 MB), controls inherit it, bold eases to
+ * semibold, and voice names take the ink colour instead of green. No new colour.
+ * A pixel font chosen in Appearance keeps its own family and weight.
+ * The weight rule needs !important because the weights are inline styles. */
+:root[data-theme='paper-ink'] {
+  --app-voice-label: var(--app-text);
+}
+:root[data-theme='paper-ink'] :is(button, input, select, textarea, option) {
+  font-family: inherit;
+}
+:root[data-theme='paper-ink']:not([data-font-pixel='true']) body {
+  font-family: 'Segoe UI', 'Yu Gothic UI', 'Hiragino Sans', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme='paper-ink']:not([data-font-pixel='true'])
+  :is(h1, h2, h3, strong, b, [style*='font-weight: 700'], [style*='font-weight: bold']) {
+  font-weight: 600 !important;
+}
+
+/* Reduced motion (owner decisions #70-71): theme-kit.js's applyReducedMotion()
+ * sets data-reduced-motion="true"/"false" on the root element from the
+ * Appearance settings' "Reduce motion" checkbox, but nothing previously read
+ * that attribute -- the toggle recorded a preference without acting on it.
+ * This is the standard "kill every animation" rule, scoped to the attribute
+ * rather than only `prefers-reduced-motion` so the in-app toggle (which can
+ * disagree with the OS setting) actually takes effect. */
+:root[data-reduced-motion='true'] *,
+:root[data-reduced-motion='true'] *::before,
+:root[data-reduced-motion='true'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-delay: 0ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  transition-delay: 0ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Step pads (owner 2026-10-05): a soft press. Only the grid's step buttons
+ * carry this class. prefers-reduced-motion and the in-app toggle are covered
+ * by the data-reduced-motion rule above (transition-duration ~0). */
+.bb-step {
+  transition: transform 90ms ease-out, filter 90ms ease-out;
+}
+.bb-step:active {
+  transform: scale(0.94);
+}
+:root[data-reduced-motion='true'] .bb-step {
+  transition: none;
+}
+:root[data-reduced-motion='true'] .bb-step:active {
+  transform: none;
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-step {
+    transition: none;
+  }
+  .bb-step:active {
+    transform: none;
+  }
+}
+
+/* Keyboard focus on step pads and step buttons (owner 2026-10-06): a 2 px
+ * ring in the focus token, drawn outside the pad and above its neighbours,
+ * so it shows on lit and unlit pads alike (shape, not only colour). */
+.bb-step:focus-visible {
+  outline: 2px solid var(--app-focus, #0f8a80);
+  outline-offset: 1px;
+  z-index: 3 !important;
+}
+
+/* Default ("modern") theme only: edges of controls and pads >= 3:1 against
+ * the panel (WCAG 1.4.11; owner 2026-10-06 tonal pass). Before this the
+ * default theme fell back to #303030-#5a5a5a per component (1.4-2.6:1).
+ * Kept out of the :root block above so the themed mapping of this role
+ * (only to --theme-color-* roles, decision #72) stays the one defined first. */
+:root:not([data-theme]),
+:root[data-theme='modern'] {
+  --app-border-strong: #6b6b6b;
+}
+
+/* Header subtitle (owner 2026-10-06): full line from 600 px, short below. */
+.bb-tagline-short {
+  display: none;
+}
+@media (max-width: 599px) {
+  .bb-tagline-full {
+    display: none;
+  }
+  .bb-tagline-short {
+    display: inline;
+  }
+}
+
+/* Page margin (owner principle 3, 2026-10-07: "余白は小さく、画面が狭いほど
+ * 詰める"). 20 px each side from 480 px up, as before; 8 px below that, so
+ * at a 360 px phone the step grid gets the 24 px it needs to show all 16
+ * columns at the 16 px pad floor (measured 2026-10-07: grid container
+ * 297 px with the 20 px margin, 321 px with 8 px; 16 x 16 + 52 + 10 = 318). */
+.bb-app-root {
+  padding: 12px 20px;
+}
+@media (max-width: 479px) {
+  .bb-app-root {
+    padding: 10px 8px;
+  }
+}

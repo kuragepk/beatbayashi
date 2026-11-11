@@ -1,0 +1,258 @@
+{
+  "schema": "ui-theme-catalogue/1",
+  "generator": "templates/ui-system/bin/gen-catalogue.mjs",
+  "themes": [
+    {
+      "id": "16bit-game",
+      "label": {
+        "ja": "16ビットゲーム",
+        "en": "16-bit game"
+      },
+      "category": "retro-game",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "k8x12",
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "16bit-game.json"
+    },
+    {
+      "id": "8bit-game",
+      "label": {
+        "ja": "8ビットゲーム",
+        "en": "8-bit game"
+      },
+      "category": "retro-game",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Misaki",
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "8bit-game.json"
+    },
+    {
+      "id": "artistic",
+      "label": {
+        "ja": "アート",
+        "en": "Artistic"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "artistic.json"
+    },
+    {
+      "id": "cvd-friendly",
+      "label": {
+        "ja": "色覚配慮",
+        "en": "Colour-vision friendly"
+      },
+      "category": "accessibility",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "cvd-friendly.json"
+    },
+    {
+      "id": "handheld",
+      "label": {
+        "ja": "携帯ゲーム機",
+        "en": "Handheld LCD"
+      },
+      "category": "retro-game",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "PixelMplus12",
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "handheld.json"
+    },
+    {
+      "id": "high-contrast",
+      "label": {
+        "ja": "高コントラスト",
+        "en": "High contrast"
+      },
+      "category": "accessibility",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "high-contrast.json"
+    },
+    {
+      "id": "modern",
+      "label": {
+        "ja": "モダン",
+        "en": "Modern"
+      },
+      "category": "standard",
+      "hasColor": false,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "modern.json"
+    },
+    {
+      "id": "neon",
+      "label": {
+        "ja": "ネオン",
+        "en": "Neon"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "neon.json"
+    },
+    {
+      "id": "nostalgia",
+      "label": {
+        "ja": "ノスタルジア",
+        "en": "Nostalgia"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "nostalgia.json"
+    },
+    {
+      "id": "oldstyle-pc",
+      "label": {
+        "ja": "レトロPC端末",
+        "en": "Old-style PC terminal"
+      },
+      "category": "retro-computer",
+      "hasColor": true,
+      "subPalettes": [
+        "green",
+        "amber"
+      ],
+      "fontFamily": [
+        "PixelMplus12",
+        "DotGothic16",
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "oldstyle-pc.json"
+    },
+    {
+      "id": "paper-ink",
+      "label": {
+        "ja": "紙とインク",
+        "en": "Paper and ink"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "paper-ink.json"
+    },
+    {
+      "id": "pastel",
+      "label": {
+        "ja": "パステル",
+        "en": "Pastel"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "pastel.json"
+    },
+    {
+      "id": "seasonal",
+      "label": {
+        "ja": "季節",
+        "en": "Seasonal"
+      },
+      "category": "seasonal",
+      "hasColor": true,
+      "subPalettes": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "seasonal.json"
+    },
+    {
+      "id": "sf",
+      "label": {
+        "ja": "SF",
+        "en": "Sci-fi"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "sf.json"
+    },
+    {
+      "id": "wa",
+      "label": {
+        "ja": "和",
+        "en": "Japanese traditional"
+      },
+      "category": "mood",
+      "hasColor": true,
+      "subPalettes": [],
+      "fontFamily": [
+        "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "DotGothic16"
+      ],
+      "schemaMinor": 1,
+      "sourceFile": "wa.json"
+    }
+  ]
+}

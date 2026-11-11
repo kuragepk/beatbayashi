@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+#
+# SPDX-License-Identifier: MIT-0
+#
+# Cloudflare Pages response headers for the BeatBayashi web build.
+# Copied verbatim into dist/ by Vite (public/ is not bundled).
+# CSP mirrors the <meta> CSP in index.html and adds what a meta tag cannot
+# carry (frame-ancestors). See docs/RELEASE_CHECKLIST_web.md.
+# X-Robots-Tag: noindex stays ON until the owner removes it at go-live.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:; connect-src 'self' http://localhost:8080; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  X-Frame-Options: DENY
+  X-Robots-Tag: noindex
+
+/sw.js
+  Cache-Control: no-cache

@@ -1,0 +1,424 @@
+{
+  "$comment": "Canonical source for the in-app rights disclosure. The web and mobile apps read generated copies of this file. Edit here, then run: node scripts/sync-rights-notice.mjs Where web and mobile genuinely differ (detail.dataFlow: the mobile app saves patterns to a backend, the web app does not), both texts live here side by side. Languages other than en are machine-written (2026-10-06, owner decision); reviewedByOwner marks the ones the owner has checked (ja since 2026-10-20, owner decision), and the app shows machineTranslationNote for every language where it is false.",
+  "version": "2026-10-06",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "dir": "ltr",
+      "reviewedByOwner": true
+    },
+    {
+      "code": "ja",
+      "label": "日本語",
+      "dir": "ltr",
+      "reviewedByOwner": true
+    },
+    {
+      "code": "zh",
+      "label": "简体中文",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "zh-Hant-TW",
+      "label": "繁體中文（台灣）",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "zh-Hant-HK",
+      "label": "繁體中文（香港）",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "hi",
+      "label": "हिन्दी",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "ko",
+      "label": "한국어",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "es",
+      "label": "Español",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "ar",
+      "label": "العربية",
+      "dir": "rtl",
+      "reviewedByOwner": false
+    },
+    {
+      "code": "fr",
+      "label": "Français",
+      "dir": "ltr",
+      "reviewedByOwner": false
+    }
+  ],
+  "ui": {
+    "trustButton": {
+      "en": "Project philosophy and policy",
+      "ja": "プロジェクト設計思想・ポリシー",
+      "zh": "项目设计理念与政策",
+      "zh-Hant-TW": "專案設計理念與政策",
+      "zh-Hant-HK": "項目設計理念同政策",
+      "hi": "परियोजना का डिज़ाइन दर्शन और नीति",
+      "ko": "프로젝트 설계 철학과 정책",
+      "es": "Filosofía de diseño y política del proyecto",
+      "ar": "فلسفة تصميم المشروع وسياساته",
+      "fr": "Philosophie de conception et politique du projet"
+    },
+    "close": {
+      "en": "Close",
+      "ja": "閉じる",
+      "zh": "关闭",
+      "zh-Hant-TW": "關閉",
+      "zh-Hant-HK": "關閉",
+      "hi": "बंद करें",
+      "ko": "닫기",
+      "es": "Cerrar",
+      "ar": "إغلاق",
+      "fr": "Fermer"
+    },
+    "languageLabel": {
+      "en": "Language",
+      "ja": "言語",
+      "zh": "语言",
+      "zh-Hant-TW": "語言",
+      "zh-Hant-HK": "語言",
+      "hi": "भाषा",
+      "ko": "언어",
+      "es": "Idioma",
+      "ar": "اللغة",
+      "fr": "Langue"
+    }
+  },
+  "headline": {
+    "en": "Anything you make with BeatBayashi can be used freely.",
+    "ja": "BeatBayashiで作成したものは自由に利用可能です。",
+    "zh": "用 BeatBayashi 制作的内容可以自由使用。",
+    "hi": "BeatBayashi से बनाई गई चीज़ें स्वतंत्र रूप से उपयोग की जा सकती हैं।",
+    "ko": "BeatBayashi로 만든 것은 자유롭게 사용할 수 있습니다.",
+    "zh-Hant-TW": "用 BeatBayashi 製作的內容可以自由使用。",
+    "zh-Hant-HK": "用 BeatBayashi 製作嘅嘢可以自由使用。",
+    "es": "Lo que crees con BeatBayashi puede usarse libremente.",
+    "ar": "يمكن استخدام ما تنشئه باستخدام BeatBayashi بحرية.",
+    "fr": "Ce que vous créez avec BeatBayashi peut être utilisé librement."
+  },
+  "permissions": [
+    {
+      "en": "Sell what you make",
+      "detail": "Commercial release, sync, streaming — all fine.",
+      "ja": "作ったものを売れる",
+      "zh": "可以出售你的作品",
+      "hi": "अपनी रचना बेच सकते हैं",
+      "ko": "만든 것을 판매할 수 있음",
+      "zh-Hant-TW": "可以出售你的作品",
+      "zh-Hant-HK": "可以出售你嘅作品",
+      "es": "Vende lo que crees",
+      "ar": "بِع ما تصنعه",
+      "fr": "Vendez ce que vous créez"
+    },
+    {
+      "en": "Publish anywhere",
+      "detail": "YouTube, Spotify, Bandcamp, games, film.",
+      "ja": "どこでも公開できる",
+      "zh": "可在任何平台发布",
+      "hi": "कहीं भी प्रकाशित करें",
+      "ko": "어디에나 공개 가능",
+      "zh-Hant-TW": "可在任何平台發布",
+      "zh-Hant-HK": "可以喺任何平台發佈",
+      "es": "Publica donde quieras",
+      "ar": "انشر في أي مكان",
+      "fr": "Publiez où vous voulez"
+    },
+    {
+      "en": "Modify everything",
+      "detail": "Edit the sounds, the patterns, the code itself.",
+      "ja": "すべて改変できる",
+      "zh": "可修改一切内容",
+      "hi": "सब कुछ बदल सकते हैं",
+      "ko": "모든 것을 수정 가능",
+      "zh-Hant-TW": "可修改一切內容",
+      "zh-Hant-HK": "可以修改所有內容",
+      "es": "Modifica todo",
+      "ar": "عدّل كل شيء",
+      "fr": "Modifiez tout"
+    },
+    {
+      "en": "Redistribute freely",
+      "detail": "Share your edits, or the app itself.",
+      "ja": "自由に再配布できる",
+      "zh": "可自由再分发",
+      "hi": "स्वतंत्र रूप से पुनर्वितरण",
+      "ko": "자유롭게 재배포 가능",
+      "zh-Hant-TW": "可自由再散布",
+      "zh-Hant-HK": "可以自由再分發",
+      "es": "Redistribuye libremente",
+      "ar": "أعد التوزيع بحرية",
+      "fr": "Redistribuez librement"
+    },
+    {
+      "en": "No credit required",
+      "detail": "You never have to name this app.",
+      "ja": "クレジット表記は不要",
+      "zh": "无需署名",
+      "hi": "श्रेय देना आवश्यक नहीं",
+      "ko": "출처 표기 불필요",
+      "zh-Hant-TW": "無需署名",
+      "zh-Hant-HK": "唔使署名",
+      "es": "Sin necesidad de dar crédito",
+      "ar": "لا يلزم ذكر المصدر",
+      "fr": "Aucune mention requise"
+    }
+  ],
+  "synthesis": {
+    "en": "Nothing here is sampled from a record. On the web app, your computer generates every sound as it plays. On mobile, your phone generates the sound files once when the app is installed, then plays those files afterward. Either way, there is no third-party recording in your export to be cleared, credited, or paid for.",
+    "ja": "録音からサンプリングした音はありません。Web版は再生時にあなたのコンピューターが音を生成します。スマホ版はアプリのインストール時に音声ファイルを一度だけ生成し、以後はそのファイルを再生します。",
+    "zh": "没有使用任何唱片采样。网页版由你的电脑在播放时实时生成声音；手机版在安装应用时生成一次音频文件，此后播放该文件。",
+    "hi": "कोई रिकॉर्डिंग सैंपल नहीं है। वेब ऐप में आपका कंप्यूटर बजाते समय ध्वनि बनाता है। मोबाइल में ऐप इंस्टॉल होते समय एक बार ध्वनि फ़ाइलें बनती हैं, फिर वही फ़ाइलें चलाई जाती हैं।",
+    "ko": "레코드 샘플링이 전혀 없습니다. 웹 앱은 재생 시 컴퓨터가 소리를 생성합니다. 모바일 앱은 설치 시 한 번 음원 파일을 생성한 뒤, 이후에는 그 파일을 재생합니다.",
+    "zh-Hant-TW": "這裡沒有使用任何唱片取樣。網頁版由你的電腦在播放時即時產生聲音；手機版在安裝應用程式時產生一次音訊檔，之後播放該檔案。",
+    "zh-Hant-HK": "呢度冇用任何唱片取樣。網頁版由你部電腦喺播放時即時產生聲音；手機版喺安裝應用程式時產生一次音訊檔，之後就播放嗰啲檔案。",
+    "es": "Aquí no hay nada sampleado de un disco. En la aplicación web, tu ordenador genera cada sonido mientras suena. En el móvil, tu teléfono genera los archivos de sonido una vez al instalar la aplicación y después reproduce esos archivos.",
+    "ar": "لا شيء هنا مأخوذ من تسجيل. في تطبيق الويب، يولّد حاسوبك كل صوت أثناء التشغيل. على الهاتف، يولّد هاتفك ملفات الصوت مرة واحدة عند تثبيت التطبيق، ثم يشغّل تلك الملفات بعد ذلك.",
+    "fr": "Rien ici n'est échantillonné à partir d'un enregistrement. Dans l'application web, votre ordinateur génère chaque son pendant la lecture. Sur mobile, votre téléphone génère les fichiers son une seule fois à l'installation, puis lit ces fichiers."
+  },
+  "licenceTerms": {
+    "en": "The code is under MIT-0. The built-in sound presets and the 72 built-in rhythm patterns are offered under CC0 1.0 or MIT-0, whichever you choose; neither asks you to credit us. What you make or change yourself stays yours.",
+    "ja": "コードはMIT-0です。内蔵の音色プリセットと72のリズムパターンは、CC0 1.0とMIT-0のどちらか好きな方の条件で使えます。どちらもクレジット表記は要りません。あなたが作ったもの・変えたものは、あなたのものです。",
+    "zh": "代码采用 MIT-0 许可。内置的音色预设和 72 个内置节奏型可按 CC0 1.0 或 MIT-0 使用，二者任选其一，都不要求署名。你自己创作或修改的内容归你所有。",
+    "hi": "कोड MIT-0 लाइसेंस के अंतर्गत है। अंतर्निहित ध्वनि प्रीसेट और 72 अंतर्निहित रिदम पैटर्न CC0 1.0 या MIT-0 के अंतर्गत उपलब्ध हैं; इनमें से कोई एक आप चुन सकते हैं। दोनों में श्रेय देना आवश्यक नहीं है। आप जो खुद बनाते या बदलते हैं, वह आपका ही रहता है।",
+    "ko": "코드는 MIT-0 라이선스입니다. 내장 음색 프리셋과 72개의 내장 리듬 패턴은 CC0 1.0과 MIT-0 중 원하는 쪽의 조건으로 사용할 수 있으며, 둘 다 출처 표기가 필요 없습니다. 직접 만들거나 바꾼 것은 당신의 것입니다.",
+    "zh-Hant-TW": "程式碼採用 MIT-0 授權。內建的音色預設和 72 個內建節奏型可依 CC0 1.0 或 MIT-0 使用，兩者任選其一，都不要求署名。你自己創作或修改的內容歸你所有。",
+    "zh-Hant-HK": "程式碼採用 MIT-0 授權。內置嘅音色預設同 72 個內置節奏型可以按 CC0 1.0 或 MIT-0 使用，兩者任揀其一，都唔使署名。你自己創作或者修改嘅內容屬於你。",
+    "es": "El código está bajo MIT-0. Los preajustes de sonido y los 72 patrones rítmicos incluidos se ofrecen bajo CC0 1.0 o MIT-0, a tu elección; ninguna de las dos te pide dar crédito. Lo que creas o cambias tú sigue siendo tuyo.",
+    "ar": "الشيفرة مرخّصة بموجب MIT-0. إعدادات الأصوات المدمجة وأنماط الإيقاع الـ 72 المدمجة متاحة بموجب CC0 1.0 أو MIT-0، أيهما تختار؛ ولا يطلب أيّ منهما ذكرنا. ما تصنعه أو تغيّره بنفسك يبقى ملكك.",
+    "fr": "Le code est sous MIT-0. Les préréglages de sons et les 72 motifs rythmiques intégrés sont proposés sous CC0 1.0 ou MIT-0, au choix ; aucune des deux ne vous demande de nous citer. Ce que vous créez ou modifiez vous-même reste à vous."
+  },
+  "translationDisclaimer": "Translations are provided to help you understand these permissions. They are explanations, not legal advice; the English text above is the reference wording. The code's licence is the MIT-0 terms shipped with it, and the built-in presets and patterns are offered under CC0 1.0 or MIT-0, whichever you choose.",
+  "machineTranslationNote": {
+    "ja": "この言語版と翻訳はデバイスで書いたものです。矛盾があれば、正確なのは英語の文です。",
+    "zh": "本语言的译文由设备撰写。如有不一致，以英文原文为准。",
+    "zh-Hant-TW": "本語言的譯文由裝置撰寫。如有不一致，以英文原文為準。",
+    "zh-Hant-HK": "呢個語言嘅譯文係由裝置寫嘅。如果有唔一致，以英文原文為準。",
+    "hi": "यह भाषा/अनुवाद डिवाइस द्वारा लिखा गया है। यदि कुछ भी अलग हो, तो अंग्रेज़ी पाठ ही सटीक है।",
+    "ko": "이 언어의 번역은 디바이스가 작성했습니다. 내용이 다르면 영어 원문이 정확합니다.",
+    "es": "Este idioma y su traducción fueron escritos por un dispositivo. Si algo no coincide, el texto en inglés es el correcto.",
+    "ar": "هذه اللغة والترجمة مكتوبة بجهاز. إذا اختلف أي شيء، فالنص الإنجليزي هو الصحيح.",
+    "fr": "Cette langue et sa traduction ont été écrites par un appareil. En cas de différence, c'est le texte anglais qui est exact."
+  },
+  "evidence": {
+    "audioFilesInRepository": 0,
+    "howToVerify": "CI runs this on every push (.github/workflows/guard.yml): git ls-files | grep -Ei '[.](wav|mp3|ogg|flac)$' must return nothing.",
+    "codeLicence": "MIT-0",
+    "contentRights": "CC0-1.0 OR MIT-0 (built-in presets and patterns; https://creativecommons.org/publicdomain/zero/1.0/ and https://opensource.org/license/mit-0)",
+    "runtimeDependencies": "Web app: MIT, plus 0BSD for tslib. Mobile and backend dependencies are listed separately in dependency-licenses.csv."
+  },
+  "detail": {
+    "title": {
+      "en": "Why you can trust this",
+      "ja": "信頼できる理由",
+      "zh": "为什么可以信任",
+      "zh-Hant-TW": "為什麼可以信任",
+      "zh-Hant-HK": "點解可以信任",
+      "hi": "आप इस पर भरोसा क्यों कर सकते हैं",
+      "ko": "믿을 수 있는 이유",
+      "es": "Por qué puedes confiar en esto",
+      "ar": "لماذا يمكنك الوثوق بهذا",
+      "fr": "Pourquoi vous pouvez faire confiance"
+    },
+    "sections": [
+      {
+        "title": {
+          "en": "The sounds are not recordings",
+          "ja": "音は録音ではありません",
+          "zh": "声音不是录音",
+          "zh-Hant-TW": "聲音不是錄音",
+          "zh-Hant-HK": "聲音唔係錄音",
+          "hi": "ध्वनियाँ रिकॉर्डिंग नहीं हैं",
+          "ko": "소리는 녹음이 아닙니다",
+          "es": "Los sonidos no son grabaciones",
+          "ar": "الأصوات ليست تسجيلات",
+          "fr": "Les sons ne sont pas des enregistrements"
+        },
+        "body": {
+          "en": "This app has no audio files in it. Each drum is built from an oscillator and an envelope and calculated the instant you press play. A recording is what carries a third party's rights — there is no recording here, so there is nothing to licence, clear, or credit.",
+          "ja": "このアプリには音声ファイルが入っていません。それぞれのドラムは発振器と音量の変化(エンベロープ)から作り、再生を押したその場で計算します。他人の権利が付くのは録音です。ここには録音がないので、使用許諾・権利処理・クレジット表記の対象がありません。",
+          "zh": "本应用不包含任何音频文件。每个鼓声都由振荡器和包络构成，在你按下播放的瞬间计算生成。第三方权利附着在录音上——这里没有录音，因此没有需要取得授权、处理权利或署名的内容。",
+          "zh-Hant-TW": "本應用程式不含任何音訊檔案。每個鼓聲都由振盪器與包絡構成，在你按下播放的瞬間即時計算。第三方權利附著在錄音上——這裡沒有錄音，因此沒有需要取得授權、處理權利或標示出處的內容。",
+          "zh-Hant-HK": "呢個應用程式冇任何音訊檔案。每個鼓聲都由振盪器同包絡構成，喺你撳播放嗰一刻即時計算。第三方權利係附喺錄音上面——呢度冇錄音，所以冇嘢需要授權、處理權利或者標明出處。",
+          "hi": "इस ऐप में कोई ऑडियो फ़ाइल नहीं है। हर ड्रम एक ऑसिलेटर और एनवेलप से बनता है और प्ले दबाते ही गणना होती है। तीसरे पक्ष के अधिकार रिकॉर्डिंग पर होते हैं — यहाँ कोई रिकॉर्डिंग नहीं है, इसलिए लाइसेंस, क्लियरेंस या श्रेय देने लायक कुछ नहीं है।",
+          "ko": "이 앱에는 오디오 파일이 없습니다. 각 드럼은 오실레이터와 엔벨로프로 만들어지며, 재생을 누르는 순간 계산됩니다. 제3자의 권리가 붙는 것은 녹음입니다. 여기에는 녹음이 없으므로 라이선스, 권리 처리, 출처 표기가 필요한 것이 없습니다.",
+          "es": "Esta aplicación no contiene archivos de audio. Cada tambor se construye con un oscilador y una envolvente y se calcula en el instante en que pulsas reproducir. Lo que lleva derechos de terceros es una grabación; aquí no hay ninguna, así que no hay nada que licenciar, autorizar ni acreditar.",
+          "ar": "لا يحتوي هذا التطبيق على أي ملفات صوتية. كل طبلة مبنية من مذبذب وغلاف صوتي، وتُحسب لحظة الضغط على التشغيل. التسجيل هو ما يحمل حقوق الغير، ولا يوجد تسجيل هنا، فلا شيء يحتاج إلى ترخيص أو تصريح أو إسناد.",
+          "fr": "Cette application ne contient aucun fichier audio. Chaque percussion est construite à partir d'un oscillateur et d'une enveloppe, et calculée à l'instant où vous lancez la lecture. Ce sont les enregistrements qui portent les droits de tiers ; il n'y en a aucun ici, donc rien à faire autoriser, à régler ni à créditer."
+        }
+      },
+      {
+        "title": {
+          "en": "The patterns are not copied from records",
+          "ja": "パターンはレコードからの写しではありません",
+          "zh": "节奏型不是从唱片复制的",
+          "zh-Hant-TW": "節奏型不是從唱片複製的",
+          "zh-Hant-HK": "節奏型唔係由唱片抄出嚟",
+          "hi": "पैटर्न रिकॉर्ड से कॉपी नहीं किए गए हैं",
+          "ko": "패턴은 음반에서 베낀 것이 아닙니다",
+          "es": "Los patrones no están copiados de discos",
+          "ar": "الأنماط ليست منسوخة من تسجيلات",
+          "fr": "Les motifs ne sont pas copiés de disques"
+        },
+        "body": {
+          "en": "The 72 rhythms are written for this app. They are named after genres, not after songs. A generic genre pattern — four-on-the-floor, a backbeat — is not something anyone owns.",
+          "ja": "72のリズムは、このアプリのために書いたものです。名前はジャンルから付けていて、曲名からではありません。4つ打ちやバックビートのような、ジャンルのよくある型は、誰のものでもありません。",
+          "zh": "这 72 种节奏是为本应用编写的。它们以曲风命名，而不是以歌曲命名。通用的曲风节奏型——四四拍底鼓、反拍——不归任何人所有。",
+          "zh-Hant-TW": "這 72 種節奏是為本應用程式編寫的。它們以曲風命名，而不是以歌曲命名。通用的曲風節奏型——四四拍大鼓、反拍——不屬於任何人。",
+          "zh-Hant-HK": "呢 72 種節奏係為呢個應用程式寫嘅。佢哋用曲風命名，唔係用歌名。通用嘅曲風節奏型——四四拍大鼓、反拍——唔屬於任何人。",
+          "hi": "72 लय इसी ऐप के लिए लिखी गई हैं। इनके नाम शैलियों पर हैं, गीतों पर नहीं। कोई सामान्य शैली पैटर्न — फ़ोर-ऑन-द-फ़्लोर, बैकबीट — किसी की संपत्ति नहीं है।",
+          "ko": "72개의 리듬은 이 앱을 위해 작성되었습니다. 이름은 곡이 아니라 장르에서 따왔습니다. 포 온 더 플로어나 백비트 같은 일반적인 장르 패턴은 누구의 소유도 아닙니다.",
+          "es": "Los 72 ritmos están escritos para esta aplicación. Llevan nombres de géneros, no de canciones. Un patrón genérico de género —cuatro en el suelo, un backbeat— no es propiedad de nadie.",
+          "ar": "الإيقاعات الـ72 مكتوبة لهذا التطبيق. أسماؤها مأخوذة من الأنواع الموسيقية لا من الأغاني. النمط العام لنوع موسيقي — مثل الإيقاع الرباعي أو الإيقاع الخلفي — لا يملكه أحد.",
+          "fr": "Les 72 rythmes ont été écrits pour cette application. Ils portent des noms de genres, pas de chansons. Un motif générique de genre — quatre temps au sol, un contretemps — n'appartient à personne."
+        }
+      },
+      {
+        "title": {
+          "en": "The code is MIT-0",
+          "ja": "コードはMIT-0です",
+          "zh": "代码采用 MIT-0",
+          "zh-Hant-TW": "程式碼採用 MIT-0",
+          "zh-Hant-HK": "程式碼採用 MIT-0",
+          "hi": "कोड MIT-0 के तहत है",
+          "ko": "코드는 MIT-0입니다",
+          "es": "El código es MIT-0",
+          "ar": "الشيفرة مرخّصة بـ MIT-0",
+          "fr": "Le code est sous MIT-0"
+        },
+        "body": {
+          "en": "MIT No Attribution (MIT-0) lets you use, copy, modify, merge, publish, distribute, sublicense and sell the code. Unlike the ordinary MIT licence, it does not ask you to keep a licence notice when you redistribute the code. It places no condition on the music you make with it.",
+          "ja": "MIT No Attribution(MIT-0)では、コードの使用・複製・変更・結合・公開・配布・再許諾・販売ができます。普通のMITライセンスと違い、コードを再配布するときにライセンスの表示を残す必要はありません。このコードで作った音楽には、何の条件も付きません。",
+          "zh": "MIT No Attribution（MIT-0）允许你使用、复制、修改、合并、发布、分发、再许可和出售代码。与普通 MIT 许可证不同，再分发代码时无需保留许可声明。它对你用它制作的音乐不附加任何条件。",
+          "zh-Hant-TW": "MIT No Attribution（MIT-0）允許你使用、複製、修改、合併、發佈、散布、再授權及販售程式碼。與一般 MIT 授權不同，再散布程式碼時無需保留授權聲明。它對你用它製作的音樂不附加任何條件。",
+          "zh-Hant-HK": "MIT No Attribution（MIT-0）容許你使用、複製、修改、合併、發佈、分發、再授權同出售程式碼。同普通 MIT 授權唔同，再分發程式碼嘅時候唔使保留授權聲明。佢對你用佢整嘅音樂冇任何條件。",
+          "hi": "MIT No Attribution (MIT-0) आपको कोड का उपयोग, कॉपी, संशोधन, विलय, प्रकाशन, वितरण, सबलाइसेंस और बिक्री करने देता है। सामान्य MIT लाइसेंस के विपरीत, कोड पुनर्वितरित करते समय लाइसेंस सूचना रखना ज़रूरी नहीं है। इससे बनाए गए आपके संगीत पर यह कोई शर्त नहीं लगाता।",
+          "ko": "MIT No Attribution(MIT-0)은 코드의 사용, 복사, 수정, 병합, 게시, 배포, 재라이선스, 판매를 허용합니다. 일반 MIT 라이선스와 달리 코드를 재배포할 때 라이선스 고지를 유지할 필요가 없습니다. 이 코드로 만든 음악에는 어떤 조건도 붙지 않습니다.",
+          "es": "MIT No Attribution (MIT-0) te permite usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y vender el código. A diferencia de la licencia MIT habitual, no exige conservar un aviso de licencia al redistribuir el código. No impone ninguna condición a la música que hagas con él.",
+          "ar": "تتيح لك رخصة MIT No Attribution (MIT-0) استخدام الشيفرة ونسخها وتعديلها ودمجها ونشرها وتوزيعها وترخيصها من الباطن وبيعها. وعلى خلاف رخصة MIT العادية، لا تطلب الإبقاء على إشعار الترخيص عند إعادة توزيع الشيفرة. ولا تفرض أي شرط على الموسيقى التي تصنعها بها.",
+          "fr": "MIT No Attribution (MIT-0) vous permet d'utiliser, copier, modifier, fusionner, publier, distribuer, sous-licencier et vendre le code. Contrairement à la licence MIT ordinaire, elle n'exige pas de conserver un avis de licence lorsque vous redistribuez le code. Elle n'impose aucune condition à la musique que vous créez avec."
+        }
+      },
+      {
+        "title": {
+          "en": "The presets and patterns: CC0 1.0 or MIT-0",
+          "ja": "プリセットとパターンはCC0 1.0かMIT-0",
+          "zh": "预设和节奏型：CC0 1.0 或 MIT-0",
+          "zh-Hant-TW": "預設與節奏型：CC0 1.0 或 MIT-0",
+          "zh-Hant-HK": "預設同節奏型：CC0 1.0 或 MIT-0",
+          "hi": "प्रीसेट और पैटर्न: CC0 1.0 या MIT-0",
+          "ko": "프리셋과 패턴: CC0 1.0 또는 MIT-0",
+          "es": "Los presets y patrones: CC0 1.0 o MIT-0",
+          "ar": "الإعدادات المسبقة والأنماط: CC0 1.0 أو MIT-0",
+          "fr": "Les préréglages et motifs : CC0 1.0 ou MIT-0"
+        },
+        "body": {
+          "en": "The built-in sound presets and the 72 rhythm patterns are data, not code. The project offers any rights it has in them under CC0 1.0 or MIT-0, whichever you choose, so you can use them anywhere without asking or crediting us. This covers only the project's own rights; patterns you write and sounds you edit stay yours.",
+          "ja": "最初から入っている音のプリセットと72のリズムパターンは、コードではなくデータです。このプロジェクトはそれらに持つ権利をCC0 1.0かMIT-0の好きな方で提供します。そのため、断りもクレジット表記もなく、どこでも使えます。対象はこのプロジェクト自身の権利だけです。あなたが書いたパターンとあなたが直した音は、あなたのものです。",
+          "zh": "内置的声音预设和 72 种节奏型是数据，而不是代码。本项目将其对它们拥有的任何权利以 CC0 1.0 或 MIT-0（由你选择）提供，因此你可以在任何地方使用，无需询问或署名。这只涵盖本项目自身的权利；你编写的节奏型和编辑的声音仍归你所有。",
+          "zh-Hant-TW": "內建的聲音預設與 72 種節奏型是資料，而不是程式碼。本專案將其對它們擁有的任何權利以 CC0 1.0 或 MIT-0（由你選擇）提供，因此你可以在任何地方使用，無需詢問或標示出處。這只涵蓋本專案自身的權利；你編寫的節奏型與編輯的聲音仍屬於你。",
+          "zh-Hant-HK": "內置嘅聲音預設同 72 種節奏型係資料，唔係程式碼。本項目將佢對呢啲嘢擁有嘅任何權利以 CC0 1.0 或 MIT-0（由你揀）提供，所以你可以喺任何地方用，唔使問亦唔使標明出處。呢度只涵蓋本項目自己嘅權利；你寫嘅節奏型同你改嘅聲音仍然屬於你。",
+          "hi": "बिल्ट-इन साउंड प्रीसेट और 72 लय पैटर्न डेटा हैं, कोड नहीं। प्रोजेक्ट इन पर अपने सभी अधिकार CC0 1.0 या MIT-0 के तहत देता है, जो भी आप चुनें, ताकि आप बिना पूछे या श्रेय दिए कहीं भी इनका उपयोग कर सकें। यह केवल प्रोजेक्ट के अपने अधिकारों को कवर करता है; आपके लिखे पैटर्न और संपादित ध्वनियाँ आपकी रहती हैं।",
+          "ko": "내장된 사운드 프리셋과 72개의 리듬 패턴은 코드가 아니라 데이터입니다. 프로젝트는 이에 대해 가진 모든 권리를 CC0 1.0 또는 MIT-0 중 원하는 것으로 제공하므로, 허락을 구하거나 출처를 밝히지 않고 어디서든 사용할 수 있습니다. 이는 프로젝트 자신의 권리만 해당하며, 직접 작성한 패턴과 편집한 소리는 여러분의 것입니다.",
+          "es": "Los presets de sonido incluidos y los 72 patrones rítmicos son datos, no código. El proyecto ofrece los derechos que tenga sobre ellos bajo CC0 1.0 o MIT-0, a tu elección, así que puedes usarlos en cualquier lugar sin pedir permiso ni darnos crédito. Esto cubre solo los derechos propios del proyecto; los patrones que escribas y los sonidos que edites siguen siendo tuyos.",
+          "ar": "الإعدادات الصوتية المسبقة المدمجة والأنماط الإيقاعية الـ72 هي بيانات وليست شيفرة. يقدّم المشروع أي حقوق يملكها فيها بموجب CC0 1.0 أو MIT-0 بحسب اختيارك، فيمكنك استخدامها في أي مكان دون استئذان أو إسناد. ويشمل هذا حقوق المشروع وحدها؛ أما الأنماط التي تكتبها والأصوات التي تعدّلها فتبقى ملكك.",
+          "fr": "Les préréglages sonores intégrés et les 72 motifs rythmiques sont des données, pas du code. Le projet offre les droits qu'il détient sur eux sous CC0 1.0 ou MIT-0, au choix, vous pouvez donc les utiliser partout sans demander ni nous créditer. Cela ne couvre que les droits propres du projet ; les motifs que vous écrivez et les sons que vous modifiez restent les vôtres."
+        }
+      },
+      {
+        "title": {
+          "en": "What that means for your track",
+          "ja": "あなたの曲にとっての意味",
+          "zh": "这对你的作品意味着什么",
+          "zh-Hant-TW": "這對你的作品意味著什麼",
+          "zh-Hant-HK": "呢樣對你嘅作品代表咩",
+          "hi": "आपके ट्रैक के लिए इसका क्या मतलब है",
+          "ko": "여러분의 트랙에 대한 의미",
+          "es": "Qué significa para tu tema",
+          "ar": "ماذا يعني ذلك لمقطوعتك",
+          "fr": "Ce que cela signifie pour votre morceau"
+        },
+        "body": {
+          "en": "You own your pattern and your audio outright. Release it commercially, monetise it on YouTube, register it with a distributor, sell the stems. You do not need our permission and you do not need to mention us. The project claims no rights in your exports: the app's part of them is offered under CC0 1.0 or MIT-0, whichever you choose. Exported pattern, MIDI and SFZ files say so inside the file.",
+          "ja": "パターンも音声も、まるごとあなたのものです。商用で出す、YouTubeで収益化する、配信業者に登録する、ステム(パートごとの音声)を売る、どれもできます。私たちの許可も、名前を出すことも要りません。このプロジェクトは、書き出したものに何の権利も主張しません。その中のアプリの部分は、CC0 1.0かMIT-0の好きな方で提供します。書き出したパターン・MIDI・SFZのファイルにもそのことを書いてあります。",
+          "zh": "你的节奏型和音频完全归你所有。你可以商业发行、在 YouTube 上获利、在发行商处登记、出售分轨。你不需要我们的许可，也不需要提及我们。本项目对你的导出内容不主张任何权利：其中属于本应用的部分以 CC0 1.0 或 MIT-0（由你选择）提供。导出的节奏型、MIDI 和 SFZ 文件内部也写明了这一点。",
+          "zh-Hant-TW": "你的節奏型與音訊完全屬於你。你可以商業發行、在 YouTube 上營利、向發行商登記、販售分軌。你不需要我們的許可，也不需要提及我們。本專案對你的匯出內容不主張任何權利：其中屬於本應用程式的部分以 CC0 1.0 或 MIT-0（由你選擇）提供。匯出的節奏型、MIDI 與 SFZ 檔案內也寫明了這一點。",
+          "zh-Hant-HK": "你嘅節奏型同音訊完全屬於你。你可以商業發行、喺 YouTube 賺錢、向發行商登記、賣分軌。你唔需要我哋批准，亦唔使提及我哋。本項目對你匯出嘅嘢唔主張任何權利：入面屬於應用程式嘅部分以 CC0 1.0 或 MIT-0（由你揀）提供。匯出嘅節奏型、MIDI 同 SFZ 檔案入面都有寫明。",
+          "hi": "आपका पैटर्न और आपका ऑडियो पूरी तरह आपका है। इसे व्यावसायिक रूप से रिलीज़ करें, YouTube पर कमाई करें, किसी डिस्ट्रीब्यूटर के साथ पंजीकृत करें, स्टेम बेचें। आपको हमारी अनुमति की ज़रूरत नहीं है और हमारा उल्लेख करने की भी नहीं। प्रोजेक्ट आपके एक्सपोर्ट पर कोई अधिकार नहीं जताता: उनमें ऐप का हिस्सा CC0 1.0 या MIT-0 के तहत दिया गया है, जो भी आप चुनें। एक्सपोर्ट की गई पैटर्न, MIDI और SFZ फ़ाइलों के अंदर भी यही लिखा है।",
+          "ko": "여러분의 패턴과 오디오는 온전히 여러분의 것입니다. 상업적으로 발매하고, YouTube에서 수익을 내고, 유통사에 등록하고, 스템을 판매할 수 있습니다. 저희의 허락도, 저희를 언급할 필요도 없습니다. 프로젝트는 여러분이 내보낸 결과물에 어떤 권리도 주장하지 않습니다. 그 안의 앱 부분은 CC0 1.0 또는 MIT-0 중 원하는 것으로 제공됩니다. 내보낸 패턴, MIDI, SFZ 파일 안에도 그렇게 적혀 있습니다.",
+          "es": "Tu patrón y tu audio son completamente tuyos. Publícalo comercialmente, monetízalo en YouTube, regístralo con una distribuidora, vende los stems. No necesitas nuestro permiso ni mencionarnos. El proyecto no reclama ningún derecho sobre tus exportaciones: la parte de la aplicación en ellas se ofrece bajo CC0 1.0 o MIT-0, a tu elección. Los archivos de patrón, MIDI y SFZ exportados lo indican en su interior.",
+          "ar": "نمطك وصوتك ملكك بالكامل. أصدره تجاريًا، واربح منه على YouTube، وسجّله لدى موزّع، وبِع المسارات المنفصلة. لا تحتاج إلى إذننا ولا إلى ذكرنا. لا يدّعي المشروع أي حقوق في ملفاتك المصدَّرة: جزء التطبيق فيها مقدَّم بموجب CC0 1.0 أو MIT-0 بحسب اختيارك. وملفات الأنماط وMIDI وSFZ المصدَّرة تذكر ذلك داخلها.",
+          "fr": "Votre motif et votre audio vous appartiennent entièrement. Publiez-le commercialement, monétisez-le sur YouTube, enregistrez-le auprès d'un distributeur, vendez les stems. Vous n'avez besoin ni de notre permission ni de nous mentionner. Le projet ne revendique aucun droit sur vos exports : la part de l'application qu'ils contiennent est offerte sous CC0 1.0 ou MIT-0, au choix. Les fichiers de motif, MIDI et SFZ exportés l'indiquent eux-mêmes."
+        }
+      }
+    ],
+    "dataFlow": {
+      "web": {
+        "title": {
+          "en": "Nothing is sent anywhere",
+          "ja": "どこにも何も送りません",
+          "zh": "不会向任何地方发送任何内容",
+          "zh-Hant-TW": "不會向任何地方傳送任何內容",
+          "zh-Hant-HK": "唔會向任何地方傳送任何嘢",
+          "hi": "कुछ भी कहीं नहीं भेजा जाता",
+          "ko": "아무것도 어디로도 보내지 않습니다",
+          "es": "No se envía nada a ningún sitio",
+          "ar": "لا يُرسَل أي شيء إلى أي مكان",
+          "fr": "Rien n'est envoyé nulle part"
+        },
+        "body": {
+          "en": "The app runs entirely on your machine. Your patterns are not uploaded and there is no account, no tracking, and no analytics in the audio path. Your patterns stay in this browser only, with no account or backup.",
+          "ja": "アプリは、すべてあなたのデバイスの中で動きます。パターンはアップロードされません。アカウントもなく、音の処理の中に追跡も分析もありません。作ったパターンはこのブラウザの中にだけあり、アカウントもバックアップもありません。",
+          "zh": "本应用完全在你的设备上运行。你的节奏型不会被上传，没有账户，音频路径中也没有跟踪或分析。你的节奏型只保存在这个浏览器里，没有账户，也没有备份。",
+          "zh-Hant-TW": "本應用程式完全在你的裝置上執行。你的節奏型不會被上傳，沒有帳號，音訊路徑中也沒有追蹤或分析。你的節奏型只存在這個瀏覽器裡，沒有帳號，也沒有備份。",
+          "zh-Hant-HK": "呢個應用程式完全喺你部機度運行。你嘅節奏型唔會被上載，冇帳戶，音訊路徑入面亦冇追蹤或者分析。你嘅節奏型只存喺呢個瀏覽器入面，冇帳戶，亦冇備份。",
+          "hi": "ऐप पूरी तरह आपके डिवाइस पर चलता है। आपके पैटर्न अपलोड नहीं होते, कोई खाता नहीं है, और ऑडियो पथ में कोई ट्रैकिंग या एनालिटिक्स नहीं है। आपके पैटर्न केवल इसी ब्राउज़र में रहते हैं, कोई खाता या बैकअप नहीं है।",
+          "ko": "앱은 전적으로 여러분의 기기에서 실행됩니다. 패턴은 업로드되지 않으며, 계정도 없고, 오디오 경로에 추적이나 분석도 없습니다. 패턴은 이 브라우저 안에만 있으며, 계정도 백업도 없습니다.",
+          "es": "La aplicación funciona por completo en tu equipo. Tus patrones no se suben, no hay cuenta y no hay rastreo ni analíticas en la ruta de audio. Tus patrones solo están en este navegador; no hay cuenta ni copia de seguridad.",
+          "ar": "يعمل التطبيق بالكامل على جهازك. لا تُرفع أنماطك، ولا يوجد حساب، ولا تتبّع ولا تحليلات في مسار الصوت. تبقى أنماطك في هذا المتصفح فقط، ولا يوجد حساب ولا نسخ احتياطي.",
+          "fr": "L'application fonctionne entièrement sur votre appareil. Vos motifs ne sont pas envoyés, il n'y a pas de compte, ni de suivi ni d'analyse dans la chaîne audio. Vos motifs restent uniquement dans ce navigateur, sans compte ni sauvegarde."
+        }
+      },
+      "mobile": {
+        "en": "Your patterns are sent only to the backend this build is set to use ({apiBaseUrl}). The address is fixed when the app is built, not chosen by you in the app. The connection uses plain http://, so it is not encrypted. This app does not send your patterns anywhere else; what that backend does with them is outside this app.",
+        "ja": "パターンはこのビルドが使うよう設定されたバックエンド({apiBaseUrl})にだけ送られます。このアドレスはアプリのビルド時に固定されたもので、アプリ内であなたが選ぶものではありません。通信は平文のhttp:// を使うため、暗号化されません。このアプリはパターンをほかの場所へは送りません。そのバックエンドがパターンをどう扱うかは、このアプリの範囲外です。",
+        "zh": "你的节奏型只会发送到此版本设定使用的后端（{apiBaseUrl}）。该地址在构建应用时就已固定，不是由你在应用内选择的。连接使用明文 http://，因此不会加密。本应用不会把你的节奏型发送到其他任何地方；该后端如何处理这些数据，不在本应用的范围之内。",
+        "zh-Hant-TW": "你的節奏型只會傳送到此版本設定使用的後端（{apiBaseUrl}）。該位址在建置應用程式時就已固定，不是由你在應用程式內選擇的。連線使用明文 http://，因此不會加密。本應用程式不會把你的節奏型傳送到其他任何地方；該後端如何處理這些資料，不在本應用程式的範圍之內。",
+        "zh-Hant-HK": "你嘅節奏型只會傳送去此版本設定使用嘅後端（{apiBaseUrl}）。該位址喺建置應用程式時就已固定，唔係由你喺應用程式內揀嘅。連線使用明文 http://，因此唔會加密。本應用程式唔會將你嘅節奏型傳送去其他任何地方；該後端點樣處理呢啲資料，唔屬於本應用程式嘅範圍。",
+        "hi": "आपके पैटर्न केवल उसी बैकएंड ({apiBaseUrl}) को भेजे जाते हैं जिसे यह बिल्ड इस्तेमाल करने के लिए सेट किया गया है। यह पता ऐप बनाते समय तय हो जाता है; इसे आप ऐप में नहीं चुनते। कनेक्शन सादे http:// का उपयोग करता है, इसलिए वह एन्क्रिप्टेड नहीं है। यह ऐप आपके पैटर्न कहीं और नहीं भेजता; वह बैकएंड उनके साथ क्या करता है, यह इस ऐप के दायरे से बाहर है।",
+        "ko": "패턴은 이 빌드가 사용하도록 설정된 백엔드({apiBaseUrl})로만 전송됩니다. 이 주소는 앱을 빌드할 때 고정되며, 사용자가 앱에서 선택하는 것이 아닙니다. 연결은 일반 http://를 사용하므로 암호화되지 않습니다. 이 앱은 패턴을 다른 곳으로 보내지 않습니다. 해당 백엔드가 패턴을 어떻게 처리하는지는 이 앱의 범위 밖입니다.",
+        "es": "Tus patrones se envían solo al backend que esta compilación está configurada para usar ({apiBaseUrl}). La dirección se fija cuando se compila la app; no la eliges tú dentro de la app. La conexión usa http:// simple, por lo que no está cifrada. Esta app no envía tus patrones a ningún otro lugar; lo que ese backend haga con ellos queda fuera de esta app.",
+        "ar": "تُرسل أنماطك فقط إلى الخادم الخلفي الذي تم إعداد هذا الإصدار لاستخدامه ({apiBaseUrl}). يُثبَّت هذا العنوان عند بناء التطبيق، ولا تختاره أنت داخل التطبيق. يستخدم الاتصال http:// العادي، لذلك فهو غير مشفّر. لا يرسل هذا التطبيق أنماطك إلى أي مكان آخر؛ وما يفعله ذلك الخادم الخلفي بها يقع خارج نطاق هذا التطبيق.",
+        "fr": "Vos motifs sont envoyés uniquement au backend que cette version est configurée pour utiliser ({apiBaseUrl}). L'adresse est fixée lors de la compilation de l'application ; vous ne la choisissez pas dans l'application. La connexion utilise http:// en clair, elle n'est donc pas chiffrée. Cette application n'envoie vos motifs nulle part ailleurs ; ce que ce backend en fait ne relève pas de cette application."
+      }
+    },
+    "footer": {
+      "en": "Full detail, including the licence of every dependency, is in docs/PROVENANCE.md and docs/PROJECT-POLICY.md. This is a plain-language summary, not legal advice.",
+      "ja": "すべての依存のライセンスを含む詳しい内容は、docs/PROVENANCE.mdとdocs/PROJECT-POLICY.mdにあります。これは平易な言葉でのまとめで、法律の助言ではありません。",
+      "zh": "完整细节（包括每个依赖项的许可证）见 docs/PROVENANCE.md 和 docs/PROJECT-POLICY.md。这是通俗的摘要，不是法律建议。",
+      "zh-Hant-TW": "完整細節（包括每個相依套件的授權）請見 docs/PROVENANCE.md 與 docs/PROJECT-POLICY.md。這是淺白的摘要，不是法律建議。",
+      "zh-Hant-HK": "完整細節（包括每個依賴項嘅授權）見 docs/PROVENANCE.md 同 docs/PROJECT-POLICY.md。呢個係淺白嘅摘要，唔係法律意見。",
+      "hi": "हर निर्भरता के लाइसेंस सहित पूरा विवरण docs/PROVENANCE.md और docs/PROJECT-POLICY.md में है। यह सरल भाषा का सारांश है, कानूनी सलाह नहीं।",
+      "ko": "모든 의존성의 라이선스를 포함한 자세한 내용은 docs/PROVENANCE.md와 docs/PROJECT-POLICY.md에 있습니다. 이것은 쉬운 말로 쓴 요약이며 법률 자문이 아닙니다.",
+      "es": "El detalle completo, incluida la licencia de cada dependencia, está en docs/PROVENANCE.md y docs/PROJECT-POLICY.md. Esto es un resumen en lenguaje llano, no asesoramiento legal.",
+      "ar": "التفاصيل الكاملة، بما فيها ترخيص كل اعتمادية، موجودة في docs/PROVENANCE.md وdocs/PROJECT-POLICY.md. هذا ملخص بلغة بسيطة وليس استشارة قانونية.",
+      "fr": "Le détail complet, y compris la licence de chaque dépendance, se trouve dans docs/PROVENANCE.md et docs/PROJECT-POLICY.md. Ceci est un résumé en langage simple, pas un conseil juridique."
+    }
+  }
+}

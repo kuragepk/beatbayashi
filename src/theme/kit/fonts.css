@@ -1,0 +1,156 @@
+/* GENERATED FILE. Do not hand-edit. */
+/* Source: templates/ui-system/fonts/manifest.json + bin/gen-fonts-css.mjs */
+/* Owner decision 2026-09-27 (#73): shared pixel fonts for the ui-system theme kit. */
+
+@font-face {
+  font-family: "Misaki";
+  src: url("./fonts/misaki/misaki_gothic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "k8x12";
+  src: url("./fonts/k8x12/k8x12.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PixelMplus12";
+  src: url("./fonts/PixelMplus12/PixelMplus12-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PixelMplus12";
+  src: url("./fonts/PixelMplus12/PixelMplus12-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DotGothic16";
+  src: url("./fonts/DotGothic16/DotGothic16-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BIZ UDPGothic";
+  src: url("./fonts/BIZUDPGothic/BIZUDPGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BIZ UDPGothic";
+  src: url("./fonts/BIZUDPGothic/BIZUDPGothic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BIZ UDGothic";
+  src: url("./fonts/BIZUDGothic/BIZUDGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BIZ UDGothic";
+  src: url("./fonts/BIZUDGothic/BIZUDGothic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP/NotoSansJP[wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS 1";
+  src: url("./fonts/MPLUS1/MPLUS1[wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS 2";
+  src: url("./fonts/MPLUS2/MPLUS2[wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans JP";
+  src: url("./fonts/IBMPlexSansJP/IBMPlexSansJP-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans JP";
+  src: url("./fonts/IBMPlexSansJP/IBMPlexSansJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("./fonts/LINESeedJP/LINESeedJP-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("./fonts/LINESeedJP/LINESeedJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic New";
+  src: url("./fonts/ZenKakuGothicNew/ZenKakuGothicNew-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic New";
+  src: url("./fonts/ZenKakuGothicNew/ZenKakuGothicNew-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Pixel fonts must not be smoothed/antialiased (bitmap look). theme-kit.js's
+ * applyFont() sets data-font-pixel="true" on the root when the active font
+ * choice is one of the bitmap families above (owner decision #73). */
+[data-font-pixel="true"] {
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  image-rendering: pixelated;
+}

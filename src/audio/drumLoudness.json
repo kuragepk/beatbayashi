@@ -1,0 +1,10 @@
+{
+  "_comment": "The single source for the drum sounds' loudness, read by the web (drumLoudness.ts) and by the phone's generator (beatbayashi-mobile/scripts/generate-drum-samples.js). Owner decision 2026-10-29: web and phone both at -16 LUFS, true peak at most -1 dBTP. peakLimiter is a static soft knee (no time constants, no pumping, the same result on every hit) placed after a voice's loudness gain, for the few voices whose crest left them short of the target at the ceiling: up to thresholdDbfs the signal is untouched, above it the excess is folded toward the ceiling with a tanh knee. The gain is then found so the limited sound reaches the target, but never more than maxOverCeilingDb above what would put the unlimited peak at the ceiling. domainLinear is the input range the web's WaveShaper curve covers.",
+  "targetLufs": -16,
+  "ceilingDbtp": -1,
+  "peakLimiter": {
+    "thresholdDbfs": -9,
+    "maxOverCeilingDb": 12,
+    "domainLinear": 4
+  }
+}

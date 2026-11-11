@@ -1,0 +1,107 @@
+version = 1
+SPDX-PackageName = "BeatBayashi"
+SPDX-PackageSupplier = "BeatBayashi contributors"
+SPDX-PackageDownloadLocation = "NOASSERTION"
+
+# The project's own code is MIT-0 (owner decision 2026-10-02; it replaced
+# MIT). Source files (.ts/.tsx/.js/.mjs/.java/.sh, justfile) carry per-file SPDX
+# headers. This repository ships no recorded audio: every sound is synthesised
+# at runtime (web) or generated on install (phone). The blocks below cover files
+# that cannot hold a comment header or that read better without one.
+
+# Prose, configuration, lockfiles, CI: declared centrally so they stay readable.
+[[annotations]]
+path = [
+  "**/*.md", ".gitignore", ".gitattributes", ".editorconfig",
+  ".pii-scan-allow",
+  "**/docs/**", ".github/**",
+  "*.json", "src/audio/*.json", ".eslintrc.json", "index.html",
+  ".env.example", "public/**",
+  "**/rightsNotice.generated.*",
+  ".gitleaks.toml", ".nvmrc", ".node-version",
+  "tools/*/package.json",
+  "scripts/kit-fonts.pinned.json",
+  "pnpm-lock.yaml",
+]
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "MIT-0"
+
+# Theme kit files synced from the desk's templates/ui-system (MIT, owner decision
+# 2026-10-02; the desk folder carries the same LICENSE). They stay MIT here because
+# they are copies of the desk files, not code written for this repository. Annotated here instead of
+# with in-file headers so the files stay byte-identical to the desk copies
+# (bin/sync-web-kit.mjs --check compares them). themes-catalogue.json cannot hold a comment.
+[[annotations]]
+path = [
+  "src/theme/kit/fonts.css",
+  "src/theme/kit/season.js",
+  "src/theme/kit/theme-check.js",
+  "src/theme/kit/theme-kit.js",
+  "src/theme/kit/text-size-control.js",
+  "src/theme/kit/themes.css",
+  "src/theme/kit/themes-catalogue.json",
+]
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "MIT"
+
+# App icons: the BeatBayashi icon U2 (owner decision 2026-10-02), drawn for
+# this project as pixel art and enlarged only by whole-number nearest-neighbour
+# scaling. Desktop window/installer icons and the phone app's icon, adaptive
+# icon layers, splash image and web favicon. They replaced the create-expo-app
+# template images (650 Industries, Inc., MIT) that sat under the phone assets.
+[[annotations]]
+path = "assets/**"
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "MIT-0"
+
+# Pixel icon set ui16 (owner request 2026-10-03): the authored grids, the
+# Recensio boards and disclosure reports, and the desk-side scripts that drew
+# them, kept as the per-pixel provenance record of src/pixel-icons.
+# Our own work. Annotated here so the copies stay byte-identical to the desk
+# originals the generator wrote to its output folder and the JSON can stay
+# plain JSON.
+[[annotations]]
+path = "src/pixel-icons/source/**"
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "MIT-0"
+
+# Background picture (owner request 2026-10-19): the festival pixel art in the lower right of the app
+# background and its Recensio disclosure report, written by src/pixel-art/source/make_matsuri_d5.mjs
+# (every pixel drawn from code as llm). Our own work.
+[[annotations]]
+path = ["src/pixel-art/matsuri_bg.png", "src/pixel-art/matsuri_bg.disclosure.json"]
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "MIT-0"
+
+# Verbatim third-party license texts of every package the web build bundles,
+# copied unmodified from each package's own LICENSE file by
+# scripts/third-party-notices.mjs, plus the hand-written fonts section. The
+# compilation is ours; the quoted texts each carry their own upstream
+# copyright, named inline.
+[[annotations]]
+path = "THIRD-PARTY-NOTICES.txt"
+SPDX-FileCopyrightText = [
+  "2026 BeatBayashi contributors",
+  "2026 GrammaRouban contributors",
+  "2024 Christoph Guttandin",
+  "2014-2020 Yotam Mann",
+  "Facebook, Inc. and its affiliates.",
+  "Meta Platforms, Inc. and affiliates.",
+  "2019 Paul Henschel",
+  "Microsoft Corporation.",
+]
+SPDX-License-Identifier = "MIT"
+
+# Built-in sound presets and the 72 built-in rhythm patterns (owner decisions
+# 2026-09-30 and 2026-10-02). The preset and pattern data is offered under
+# CC0 1.0 or MIT-0, whichever the user chooses; the code around it is MIT-0.
+# This covers only the project's own rights; what users make stays theirs.
+# synthPresets.ts, soundBasis.ts and presets.ts mix both, so each header says
+# "MIT-0 AND (CC0-1.0 OR MIT-0)" and explains the split; a header wins over this
+# file under REUSE's default precedence. Future preset data files or samples
+# added under presets/ or samples/ are "CC0-1.0 OR MIT-0" here.
+# Licence texts: LICENSES/CC0-1.0.txt, LICENSES/MIT-0.txt.
+[[annotations]]
+path = ["presets/**", "samples/**"]
+SPDX-FileCopyrightText = "2026 BeatBayashi contributors"
+SPDX-License-Identifier = "CC0-1.0 OR MIT-0"

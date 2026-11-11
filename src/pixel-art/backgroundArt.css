@@ -1,0 +1,39 @@
+/* SPDX-FileCopyrightText: 2026 BeatBayashi contributors
+ *
+ * SPDX-License-Identifier: MIT-0
+ *
+ * The festival picture, fixed to the lower right of the window behind the UI
+ * (BackgroundArt.tsx). No colour is set here. The app root becomes its own
+ * stacking context so z-index -1 puts the picture above the root's background
+ * but below every control. Whole multiples only: 480 x 270 (1x) or 960 x 540
+ * (2x on large windows); hidden on narrow screens, where it would sit under the
+ * step grid.
+ */
+.bb-app-root {
+  isolation: isolate;
+}
+
+.bb-bg-art {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 480px;
+  height: 270px;
+  z-index: -1;
+  image-rendering: pixelated;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 1920px) and (min-height: 1000px) {
+  .bb-bg-art {
+    width: 960px;
+    height: 540px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bb-bg-art {
+    display: none;
+  }
+}

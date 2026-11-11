@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.wav binary
+*.jar binary
+*.pdf binary
+
+# standard-stamp: src=bin/gen-repo-standard.py src-sha256=2817d2859886 self-sha256=f4dd305e0460 stamped=2026-09-18T06:19:21Z
